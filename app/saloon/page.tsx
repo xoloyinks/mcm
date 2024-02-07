@@ -425,7 +425,7 @@ export default function Saloon() {
                 }}
                 className='text-black w-[50%] h-full max-sm:w-full max-sm:px-5 max-sm:py-3 max-sm:mt-10 max-sm:h-[250px] max-xl:h-[35vh] max-xl:mt-20'>
                     <Map 
-                        mapboxAccessToken='pk.eyJ1IjoieG9sb3lpbmtzIiwiYSI6ImNsbmhvcW8yMTFpMGUycnFwdmF1ZG9rMnQifQ.FEYs8vPYTZvhxIR9C64LxQ'
+                        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
                         initialViewState={{
                             longitude: -121.680478,
                             latitude:37.995735 ,
