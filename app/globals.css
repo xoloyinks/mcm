@@ -108,3 +108,35 @@ html{
         margin-top: 0%;
     }
 }
+
+@media screen and (height: 667px ) {
+  .banner-content{
+    overflow-y: scroll;
+  }
+  .swiper-card{
+    height: 350px;
+    margin-bottom: 120px;
+  }
+  .check{
+    padding-bottom: 20px;
+    height: 1050px;
+    background-color: black;
+
+  }
+}
+
+@media screen and (height: 736px ){
+  .banner-content{
+      overflow-y: scroll;
+  }
+  .swiper-card{
+    height: 350px;
+    margin-bottom: 120px;
+    
+  }
+  .check{
+    padding-bottom: 20px;
+    height: 750px;
+  }
+}
+

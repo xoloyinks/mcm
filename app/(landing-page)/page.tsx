@@ -70,7 +70,7 @@ export default function Home() {
                 <DropdownMenu>
                     <DropdownMenuTrigger><FaBars color="black" /></DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuLabel>Menu</DropdownMenuLabel>
+                      <DropdownMenuLabel>Services</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
                         <Link href='/saloon'>MCM Hair Beauty Salon</Link>
@@ -107,8 +107,8 @@ export default function Home() {
               </Swiper>
                 
                 {/* Banner content */}
-                <div className="absolute z-50 text-white top-0 w-full h-full flex items-center justify-center max-lg:flex-col-reverse max-lg:pb-5 lg:flex-col-reverse xl:flex-row  xl:items-center lg:pb-10 ">
-                      <div className="w-[35%] h-[80%] max-lg:w-full">
+                <div className="banner-content absolute z-50 text-white top-0 w-full h-full flex items-center justify-center max-lg:flex-col-reverse max-lg:pb-5 lg:flex-col-reverse xl:flex-row  xl:items-center lg:pb-10 ">
+                      <div className="w-[35%] h-[80%] max-lg:w-full check">
                         <Swiper
                           effect={'cards'}
                           grabCursor={true}
@@ -121,16 +121,16 @@ export default function Home() {
                             clickable: true,
                           }}
                           navigation={true}
-                          className="mySwiper w-[70%] h-full max-lg:w-[48%] lg:w-[100%] xl:w-[70%] max-sm:w-[70%] max-[380px]:w-[55%] max-[380px]: "
+                          className="mySwiper swiper-card w-[70%] h-full max-lg:w-[48%] lg:w-[100%] xl:w-[70%] max-sm:w-[70%] max-[380px]:w-[55%] max-[380px]: "
                         >
                           <SwiperSlide className="rounded-2xl relative">
                               <Image alt="MCM Beauty hair slide" src={hair} width={0} height={0} className="h-full absolute" />
                               <span className="w-full h-full bg-black/25 absolute"></span>
                               <div className="absolute w-full h-full z-30 px-5 py-5 flex flex-col justify-between">
-                                <h1 className="text-4xl sacramento text-center max-[380px]:text-xl">MCM Hair <br /> Beauty saloon</h1>
-                                <Link href="/saloon" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px]">
+                                <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Hair <br className="max-sm:hidden" /> Beauty saloon</h1>
+                                <Link href="/saloon" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
                                     <span>Explore</span>
-                                    <PiCaretRight className="text-4xl animate-pulse max-[380px]:text-xl" />
+                                    <PiCaretRight className="text-4xl animate-pulse max-sm:text-xl" />
                                 </Link>
                             </div>
                           </SwiperSlide>
@@ -139,30 +139,32 @@ export default function Home() {
                             <Image alt="MCM Kitchen" src={food} width={0} height={0} className="h-full absolute z-10" />
                             <span className="w-full h-full bg-black/25 absolute z-10"></span>
                             <div className="absolute w-full h-full z-30 px-5 py-5 flex flex-col justify-between">
-                                <h1 className="text-4xl sacramento text-center max-[380px]:text-xl">MCM Kitchen</h1>
-                                <Link href="/catering" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-0">
+                            <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Kitchen</h1>
+                                <Link href="/catering" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
                                     <span>Explore</span>
-                                    <PiCaretRight className="text-4xl animate-pulse" />
+                                    <PiCaretRight className="text-4xl animate-pulse max-sm:text-xl" />
                                 </Link>
                             </div>
                           </SwiperSlide>
                         </Swiper>
                       </div>
 
-                      <div className="xl:w-[35%] max-lg:w-full max-lg:mx-auto max-lg:text-center pl-20 flex flex-col justify-evenly max-lg:items-center h-[80%]  my-10 max-lg:pl-0 lg:pl-0 lg-text-center lg:items-center lg:w-full xl:text-left xl:pl-20 xl:items-start max-sm:gap-5">
+                      <div className="xl:w-[35%] max-lg:w-full max-lg:mx-auto max-lg:text-center pl-20 flex flex-col justify-evenly max-lg:items-center h-[80%]  my-10 max-lg:pl-0 lg:pl-0 lg-text-center lg:items-center lg:w-full xl:text-left xl:pl-20 xl:items-start max-sm:gap-3">
                           <h1 className="sm:text-4xl xl:w-[80%] max-lg:w-fit max-lg:mx-auto lg:text-center lg:w-fit xl:text-left max-sm:text-xl max-[380px]:text-[18px]">Ready for a 
                             <br /> 
-                            <span className="text-6xl text-yellow-500 font-semibold italiana max-sm:text-5xl max-sm:leading-12 max-[380px]:text-3xl">Transformative</span>
+                            <span className=" transform text-6xl text-yellow-500 font-semibold italiana max-sm:text-5xl max-sm:leading-12 max-[380px]:text-4xl">Transformative</span>
                             <br />
                             Fusion&#63;
                           </h1>
-                          <div className="min-[380px]:hidden  flex w-[80%] text-[12px]">
-                              <h6 className="">Lorem ipsum dolor sit amet consectetur adipisicing eli&#63;</h6>
-                              <h6>Lorem ipsum dolor sit amet consectetur adipisicing eli&#63;</h6>
-                          </div>
-                          <h6 className="xl:text-sm xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm max-[380px]:text-[12px] max-[380px]:hidden">Lorem ipsum dolor sit amet consectetur&#44; adipisicing elit&#46; <br className="max-lg:block hidden" /> At reprehenderit&#46;</h6>
+                          <h6 className="xl:text-sm max-[380px]:text-[12px] xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm">
+                            Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a> <br />
+                            <br className="max-lg:block hidden" /><form action="mailto:mcm.kitchens2024@gmail.com">Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></form>
+                          </h6>
+                          <h6 className="xl:text-sm xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm max-[380px]:text-[12px] max-[380px]:hidden">
+                            233 Amberwind circle, <br className="max-lg:block hidden" /> Oakley California&#46;
+                          </h6>
 
-                          <h6 className="xl:text-sm max-[380px]:text-[12px] xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm max-[380px]:hidden">Lorem ipsum dolor sit amet consectetur&#44; adipisicing elit&#46; <br className="max-lg:block hidden" />At reprehenderit&#46;</h6>
+                         
 
                           <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button>
                       </div>
