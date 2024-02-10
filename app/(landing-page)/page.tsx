@@ -21,6 +21,7 @@ import swiper_1 from "../images/cc270c2ec0855e4ad3d9b6988b0caaa7.jpeg"
 import swiper_2 from "../images/pexels-andrea-piacquadio-3768912.jpg"
 import swiper_3 from "../images/pexels-ntsikelelo-radebe-12192379.jpg"
 
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,14 +31,66 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useEffect, useState } from "react";
+
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
+  if (!isMounted) {
+    return null;
+  }
   const effectImages = [
     swiper_2,
     swiper_1,
     swiper_3
 ]
+
+// const Contact = () => {
+//   return(
+//     <>
+//       <Dialog>
+//         <DialogTrigger>
+//             <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button>
+//         </DialogTrigger>
+//         <DialogContent>
+//           <DialogHeader>
+//             <DialogTitle>Reach us</DialogTitle>
+//             <DialogDescription>
+//               <div className="text-center mt-5">
+//                 <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
+//                 <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+//                 <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
+//               </div>
+//               <div className="text-center mt-5 font-semibold">
+//                 or send us a Message
+//               </div>
+//             </DialogDescription>
+//           </DialogHeader>
+//         </DialogContent>
+//       </Dialog>
+//     </>
+//   )
+// }
+
+
+
 
   return (
     <>
@@ -107,7 +160,7 @@ export default function Home() {
               </Swiper>
                 
                 {/* Banner content */}
-                <div className="banner-content absolute z-50 text-white top-0 w-full h-full flex items-center justify-center max-lg:flex-col-reverse max-lg:pb-5 lg:flex-col-reverse xl:flex-row  xl:items-center lg:pb-10 ">
+                <div className="banner-content absolute z-50 text-white top-0 w-full h-full flex items-center justify-center max-lg:flex-col-reverse max-lg:pb-5 lg:flex-col-reverse xl:flex-row  xl:items-center lg:pb-10">
                       <div className="w-[35%] h-[80%] max-lg:w-full check">
                         <Swiper
                           effect={'cards'}
@@ -158,15 +211,39 @@ export default function Home() {
                           </h1>
                           <h6 className="xl:text-sm max-[380px]:text-[12px] xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm">
                             Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a> <br />
+                            {/* <br className="max-sm:hidden" /> */}
                             <br className="max-lg:block hidden" /><form action="mailto:mcm.kitchens2024@gmail.com">Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></form>
                           </h6>
                           <h6 className="xl:text-sm xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm max-[380px]:text-[12px] max-[380px]:hidden">
                             233 Amberwind circle, <br className="max-lg:block hidden" /> Oakley California&#46;
                           </h6>
 
-                         
+                          {/* <Contact /> */}
+                          <Drawer>
+                            <DrawerTrigger><Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button></DrawerTrigger>
+                            <DrawerContent>
+                              <DrawerHeader>
+                                <DrawerTitle>Reach us</DrawerTitle>
+                                <DrawerDescription>
+                                  <div className="text-center mt-5">
+                                      <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
+                                      <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                      <br />
+                                      <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
+                                  </div>
+                                  <form method='POST' action="https://formspree.io/f/myyrekjv" className='mt-5 flex flex-col gap-5 w-3/12 mx-auto max-sm:w-full max-xl:w-full'>
+                                    <Input type='text' placeholder='Your Name' name='Name' />
+                                    <Input type='text' name='Email' placeholder='Your Email' required />
+                                    <Textarea name='Message' placeholder='Your Message' required />
+                                    <Button type='submit' className='sacramento xl:w-full max-sm:w-full px-20 text-white font-bold'>Send Message</Button>
+                                  </form>
+                                </DrawerDescription>
+                              </DrawerHeader>
+                            </DrawerContent>
+                          </Drawer>
 
-                          <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button>
+                          
+
                       </div>
                 </div>
             </div>

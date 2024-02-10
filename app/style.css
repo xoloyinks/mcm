@@ -16,3 +16,21 @@
 .dancing {
   font-family: "Dancing Script", cursive;
 }
+
+
+@media screen and (max-height: 667px) and (max-width: 375px) {
+  .banner-content{
+    overflow-y: scroll;
+    background-color: black;
+  }
+  .swiper-card{
+    height: 850px;
+    margin-bottom: 120px;
+  }
+  .check{
+    padding-bottom: 20px;
+    height: 1050px;
+    background-color: black;
+
+  }
+}
