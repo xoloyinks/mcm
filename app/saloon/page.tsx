@@ -39,6 +39,15 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+
+import {
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } from "@/components/ui/drawer"
   
 
 const effectImages = [
@@ -51,7 +60,8 @@ const effectImages = [
 export default function Saloon() {
    
     const [formattedTime, setFormattedTime] = useState('');
-
+    const [isMounted, setIsMounted] = useState(false);
+    
     const daysOfTheWeek = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentDate = new Date();
     const dayOfWeek : number = currentDate.getDay();
@@ -72,6 +82,8 @@ export default function Saloon() {
   
         const formattedTimeString = `${hours}:${minutes}:${seconds}`;
         setFormattedTime(formattedTimeString);
+
+        setIsMounted(true);
       };
   
       // Update time every 100 milliseconds (adjust as needed)
@@ -81,6 +93,9 @@ export default function Saloon() {
       return () => clearInterval(intervalId);
     }, []);
 
+    if (!isMounted) {
+        return null;
+    }
 
   return (
     <>
@@ -133,7 +148,28 @@ export default function Saloon() {
                 }}
                 >
                         <span className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl'>Our Beauty Center</span>
-                        <Button className='mt-10 px-10 text-black py-5 bg-yellow-400'>Reach us</Button>
+                        <Drawer>
+                            <DrawerTrigger><Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button></DrawerTrigger>
+                            <DrawerContent>
+                              <DrawerHeader>
+                                <DrawerTitle>Reach us</DrawerTitle>
+                                <DrawerDescription>
+                                  <div className="text-center mt-5">
+                                      <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
+                                      <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                      <br />
+                                      <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
+                                  </div>
+                                  <form method='POST' action="https://formspree.io/f/myyrekjv" className='mt-5 flex flex-col gap-5 w-3/12 mx-auto max-sm:w-full max-xl:w-full'>
+                                    <Input type='text' placeholder='Your Name' name='Name' />
+                                    <Input type='text' name='Email' placeholder='Your Email' required />
+                                    <Textarea name='Message' placeholder='Your Message' required />
+                                    <Button type='submit' className='sacramento xl:w-full max-sm:w-full px-20 text-white font-bold'>Send Message</Button>
+                                  </form>
+                                </DrawerDescription>
+                              </DrawerHeader>
+                            </DrawerContent>
+                          </Drawer>
                 </motion.div>
 
                 {/* Tags */}
