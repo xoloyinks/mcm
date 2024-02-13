@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import model from "../images/pexels-gu-kssn-11452464.jpg"
-import rate from "../images/pexels-cottonbro-studio-3993311.jpg"
+import model from "../images/IMG-20240210-WA0012.jpg"
+import rate from "../images/IMG-20240210-WA0022.jpg"
 import freenzy from "../images/HD-wallpaper-black-hair-model-girls-model-removebg-preview (1).png"
 import highlight from "../images/icons8-woman-head-50.png"
 import haircare from "../images/icons8-hairdryer-64.png"
@@ -48,12 +48,53 @@ import {
     DrawerTitle,
     DrawerTrigger,
   } from "@/components/ui/drawer"
+import Gallery from '../components/gallery/page';
+
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
   
 
 const effectImages = [
     swiper_2,
     swiper_1,
     swiper_3
+]
+
+const hair_styles = [
+    {
+        style: "Braids",
+        price : "$20"
+    },
+    {
+        style: "Dread Locks",
+        price : "$20"
+    },
+    {
+        style: "Crotchet",
+        price : "$20"
+    },
+    {
+        style: "Didi",
+        price : "$20"
+    },
+    {
+        style: "Weaving",
+        price : "$20"
+    },
+    {
+        style: "Wiggin",
+        price : "$20"
+    },
+    {
+        style: "Kinky",
+        price : "$20"
+    }
 ]
 
 
@@ -112,9 +153,34 @@ export default function Saloon() {
                     <div className="italiana font-semibold max-sm:hidden">MCM HAIR BEAUTY SALON</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                         <Link href='/'>Home</Link>
-                        <Link href='#services'>Services</Link>
                         <Link href='#about'>About</Link>
+                        <span>
+                            <Drawer>
+                                <DrawerTrigger>Reach us</DrawerTrigger>
+                                <DrawerContent>
+                                <DrawerHeader>
+                                    <DrawerTitle>Reach us</DrawerTitle>
+                                    <DrawerDescription>
+                                    <div className="text-center mt-5">
+                                        <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
+                                        <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                        <br />
+                                        <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
+                                    </div>
+                                    <form method='POST' action="https://formspree.io/f/myyrekjv" className='mt-5 flex flex-col gap-5 w-3/12 mx-auto max-sm:w-full max-xl:w-full'>
+                                        <Input type='text' placeholder='Your Name' name='Name' />
+                                        <Input type='text' name='Email' placeholder='Your Email' required />
+                                        <Textarea name='Message' placeholder='Your Message' required />
+                                        <Button type='submit' className='sacramento xl:w-full max-sm:w-full px-20 text-white font-bold'>Send Message</Button>
+                                    </form>
+                                    </DrawerDescription>
+                                </DrawerHeader>
+                                </DrawerContent>
+                            </Drawer>
+                        </span>
+                        
                     </div>
+
                     <div className='text-2xl xl:hidden max-xl:w-[20%] max-xl:flex max-xl:justify-end'>
                     <DropdownMenu>
                     <DropdownMenuTrigger> <FaBars /></DropdownMenuTrigger>
@@ -123,9 +189,6 @@ export default function Saloon() {
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
                         <Link href='/'>Home</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <Link href='#services'>Services </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href='#about'>About </Link>
@@ -147,8 +210,44 @@ export default function Saloon() {
                     delay: 0.5
                 }}
                 >
-                        <span className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl'>Our Beauty Center</span>
-                        <Drawer>
+                        <div className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl'>
+                            Our Beauty Center
+                        </div>
+                        <div className='max-xl:hidden'>
+                            <Dialog>
+                                <DialogTrigger>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">OUR STYLES</Button>
+                                </DialogTrigger>
+                                <DialogContent className='max-w-[550px]'>
+                                    <DialogHeader>
+                                    <DialogTitle>STYLES</DialogTitle>
+                                    <DialogDescription className='text-black text-md font-semibold py-3'>
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {style.style}</span><span>{style.price}</span></p>)}
+                                        <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+                        </div>
+
+                        {/* Mobile Display */}
+                         <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
+                            <Dialog>
+                                <DialogTrigger>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-transparent border-2 border-yellow-400">OUR STYLES</Button>
+                                </DialogTrigger>
+                                <DialogContent>
+                                    <DialogHeader>
+                                    <DialogTitle>STYLES</DialogTitle>
+                                    <DialogDescription className='text-black text-md font-semibold relative text-left'>
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {style.style}</span><span>{style.price}</span></p>)}
+                                        <span className='absolute text-xl -bottom-5 -right-4 italiana text-gray-400 z-50'>MCM</span>
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+
+                            <Drawer>
                             <DrawerTrigger><Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button></DrawerTrigger>
                             <DrawerContent>
                               <DrawerHeader>
@@ -170,6 +269,9 @@ export default function Saloon() {
                               </DrawerHeader>
                             </DrawerContent>
                           </Drawer>
+                         </div>
+
+                        
                 </motion.div>
 
                 {/* Tags */}
@@ -204,9 +306,7 @@ export default function Saloon() {
             </div>
             
             {/* About */}
-            <div id='about' className='w-screen h-screen overflow-x-hidden bgs-gray-950 relative flex items-center px-20 justify-center gap-20 max-sm:flex-col max-sm:px-10 max-[380px]:h-[120vh] max-xl:px-10 max-xl:h-fit max-xl:pb-16 max-xl:justify-evenly'
-           
-            >
+            <div id='about' className='w-screen h-screen overflow-x-hidden bgs-gray-950 relative flex items-center px-20 justify-center gap-20 max-sm:flex-col max-sm:px-10 max-[380px]:h-[120vh] max-xl:px-10 max-xl:h-fit max-xl:pb-16 max-xl:justify-evenly'>
                 <div className='text-6xl absolute left-36 sacramento -rotate-90 text-slate-900 max-sm:left-64 max-sm:w-fit max-xl:-left-10'>
                     About us
                 </div>
@@ -242,67 +342,6 @@ export default function Saloon() {
                     </motion.div>
             </div>
 
-            {/* Services */}
-            <div id='services' className='h-[70vh] w-screen overflow-y-hidden relative max-sm:h-[120vh] max-sm:overflow-x-hidden max-[380px]:h-[155vh] max-xl:h-[50vh]'>
-                <motion.div
-                initial={{translateX:-50}}
-                whileInView={{translateX:0}}
-                transition={{
-                    type:"spring",
-                    duration:1
-                }}
-                className='absolute left-0 top-0 rounded-br-full rounded-tr-xl z-20 bg-yellow-400 px-16 py-5 text-6xl italiana text-slate-800 max-sm:text-2xl max-xl:text-4xl'>
-                    <h6 className=''>Our services</h6>
-                </motion.div>
-
-                <span className='absolute z-10 w-full h-full bg-black/70 max-xl:h-'></span>
-                <Image src={services} alt='Services background' width={0} height={0} className='absolute max-sm:h-[120vh] max-sm:min-w-[1200px] max-sm:-translate-x-44 max-[380px]:h-[165vh] max-[380px]:min-w-[1400px] max-[380px]:-translate-x-72 max-xl:h-[50vh]' />
-                <div className='w-full h-full absolute z-20 flex items-center justify-evenly max-sm:flex-col max-sm:mt-24 max-sm:gap-8 max-sm:justify-start max-xl:mt-0 max-xl:justify-between max-xl:text-[14px]'>
-                      <motion.div
-                      initial={{opacity: 0, translateY:50}}
-                      whileInView={{opacity: 1, translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 0.5
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={highlight} alt='highlight' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Highlight</span>
-                        <span className='w-[80%] text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div>
-                      <motion.div
-                      initial={{opacity: 0, translateY:50}}
-                      whileInView={{opacity: 1, translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 0.8
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={haircare} alt='highlight' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Hair care</span>
-                        <span className='text-center w-[80%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div> 
-                      <motion.div
-                      initial={{opacity:0, translateY:50}}
-                      whileInView={{opacity:1,translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 1
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={haircut} alt='highlight' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Hair cut</span>
-                        <span className='text-center w-[80%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div>
-                </div>
-            </div>
-
             {/* Frenzy */}
             <motion.div
             initial={{ opacity:0}}
@@ -317,9 +356,12 @@ export default function Saloon() {
                 <span className='max-sm:text-6xl max-[380px]:text-5xl max-[380px]:pb-5 max-xl:text-[70px] max-xl:pr-24 max-sm:pr-0'>Hair Treatment</span>
                 
             </motion.div>
+            
+            {/* Gallery */}
+            <Gallery />
 
             {/* Haircut Prices */}
-            <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
+            {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
                 <motion.div
                 initial={{ translateX:50}}
                 whileInView={{translateX:0}}
@@ -381,7 +423,7 @@ export default function Saloon() {
                         </div>
                     </motion.div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Working hours */}
             <div className='w-full bg-gray-950 h-fit py-10 relative pt-36 px-[350px] max-sm:px-5 max-sm:pt-28 max-xl:px-5' >

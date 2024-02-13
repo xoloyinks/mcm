@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import model from "../images/9858dabef8e6b2da6332d2974d878421.jpeg"
-import rate from "../images/pexels-dapur-melodi-1109197.jpg"
+import model from "../images/IMG-20240210-WA0008.jpg"
+import rate from "../images/IMG-20240210-WA0007.jpg"
 import freenzy from "../images/pexels-nathan-cowley-1153372-removebg-preview.png"
 import seafood from "../images/icons8-crab-50.png"
 import vegetables from "../images/icons8-carrot-50.png"
@@ -48,6 +48,15 @@ import {
     DrawerTitle,
     DrawerTrigger,
   } from "@/components/ui/drawer"
+
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
   
 
 const effectImages = [
@@ -56,6 +65,100 @@ const effectImages = [
     swiper_3
 ]
 
+const foods = [
+    {
+        food: "Nigerian Jollof Rice",
+        price : "$20"
+    },
+    {
+        food: "Nigerian Fried Rice",
+        price : "$20"
+    },
+    {
+        food: "Ofada Rice & Sauce(Ayamase)",
+        price : "$20"
+    },
+    {
+        food: "Amala with Gbegiri & Ewedu",
+        price : "$20"
+    },
+    {
+        food: "Yam Porridge",
+        price : "$20"
+    },
+    {
+        food: "Ekuru",
+        price : "$20"
+    },
+    {
+        food: "Ewa Aganyin with Sauce",
+        price : "$20"
+    },
+    {
+        food: "Moi-Moi",
+        price : "$20"
+    },
+    {
+        food: "Meat Pies",
+        price : "$20"
+    },
+    {
+        food: "Sussage Rolls",
+        price : "$20"
+    },
+    {
+        food: "Bread Rolls",
+        price : "$20"
+    },
+    {
+        food: "Egusi Soup",
+        price : "$20"
+    },
+    {
+        food: "Vegetables Soup(Efo-riro)",
+        price : "$20"
+    },
+    {
+        food: "Plain Rice Stew",
+        price : "$20"
+    },
+    {
+        food: "Okra Soup",
+        price : "$20"
+    },
+
+    {
+        food: "Pepper Soup",
+        price : "$20"
+    }
+]
+
+const proteins = [
+    {
+        protein: "Grilled Chicken",
+        price: "$120"
+    },
+    {
+        protein: "Fried Chicken",
+        price: "$120"
+    },
+    {
+        protein: "Peppered Beef",
+        price: "$120"
+    },
+    {
+        protein: "Fried Beef",
+        price: "$120"
+    },
+    {
+        protein: "Peppered Fish",
+        price: "$120"
+    },
+    {
+        protein: "Fried Fish",
+        price: "$120"
+    }
+]
 
 export default function Catering() {
 
@@ -100,7 +203,7 @@ export default function Catering() {
         return null;
     }
 
-    
+
   return (
     <>
         <section className='w-screen h-fit overflow-x-hidden bg-gray-950'>
@@ -115,9 +218,32 @@ export default function Catering() {
                     <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-xl:w-[20%]">MCM</Link>
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
-                        <Link href='/'>Home</Link>
-                        <Link href='#services'>Services</Link>
+                    <Link href='/'>Home</Link>
                         <Link href='#about'>About</Link>
+                        <span>
+                            <Drawer>
+                                <DrawerTrigger>Reach us</DrawerTrigger>
+                                <DrawerContent>
+                                <DrawerHeader>
+                                    <DrawerTitle>Reach us</DrawerTitle>
+                                    <DrawerDescription>
+                                    <div className="text-center mt-5">
+                                        <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
+                                        <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                        <br />
+                                        <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
+                                    </div>
+                                    <form method='POST' action="https://formspree.io/f/myyrekjv" className='mt-5 flex flex-col gap-5 w-3/12 mx-auto max-sm:w-full max-xl:w-full'>
+                                        <Input type='text' placeholder='Your Name' name='Name' />
+                                        <Input type='text' name='Email' placeholder='Your Email' required />
+                                        <Textarea name='Message' placeholder='Your Message' required />
+                                        <Button type='submit' className='sacramento xl:w-full max-sm:w-full px-20 text-white font-bold'>Send Message</Button>
+                                    </form>
+                                    </DrawerDescription>
+                                </DrawerHeader>
+                                </DrawerContent>
+                            </Drawer>
+                        </span>
                     </div>
                     <div className='text-2xl xl:hidden max-xl:w-[20%] max-xl:flex max-xl:justify-end'>
                     <DropdownMenu>
@@ -127,9 +253,6 @@ export default function Catering() {
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
                         <Link href='/'>Home</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <Link href='#services'>Services </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href='#about'>About </Link>
@@ -152,7 +275,56 @@ export default function Catering() {
                 }}
                 >
                         <span className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl'>Savor Every Bite</span>
-                        <Drawer>
+                        <div className='max-xl:hidden'>
+                            <Dialog>
+                                <DialogTrigger>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">OUR MENU</Button>
+                                </DialogTrigger>
+                                <DialogContent>
+                                    <DialogHeader>
+                                    <DialogTitle>MENU</DialogTitle>
+                                    <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
+                                    <div className='w-6/12 px-3'>
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {food.food}</span><span>{food.price}</span></p>)}
+                                    </div>
+                                    <div className='w-5/12 px-3'>
+                                        PROTEINS
+                                        <hr className='mb-3' />
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {protein.protein}</span><span>{protein.price}</span></p>)}
+                                    </div>
+                                        <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
+                                        
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+                        </div>
+
+                        {/* Mobile Display */}
+                        <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
+                            <Dialog>
+                                <DialogTrigger>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-transparent border-2 border-yellow-400">OUR MENU</Button>
+                                </DialogTrigger>
+                                <DialogContent>
+                                    <DialogHeader>
+                                    <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
+                                    <DialogDescription className='text-black text-sm font-semibold relative text-left'>
+                                    <div>
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food.food}</span><span>{food.price}</span></p>)}
+                                    </div> 
+                                    <div>
+                                        <b>PROTEINS</b>
+                                        <hr className='mb-3' />
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {protein.protein}</span><span>{protein.price}</span></p>)}
+                                    </div>
+                                        
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+
+                            <Drawer>
                             <DrawerTrigger><Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button></DrawerTrigger>
                             <DrawerContent>
                               <DrawerHeader>
@@ -160,7 +332,7 @@ export default function Catering() {
                                 <DrawerDescription>
                                   <div className="text-center mt-5">
                                       <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
-                                      <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                      <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail&#46;com</button></div>
                                       <br />
                                       <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
                                   </div>
@@ -174,6 +346,8 @@ export default function Catering() {
                               </DrawerHeader>
                             </DrawerContent>
                           </Drawer>
+                         </div>
+
                 </motion.div>
 
                 {/* Tags */}
@@ -247,7 +421,7 @@ export default function Catering() {
             </div>
 
             {/* Services */}
-            <div id='services' className='h-[70vh] w-screen overflow-y-hidden relative max-sm:h-[120vh] max-sm:overflow-x-hidden max-[380px]:h-[155vh] max-xl:h-[50vh]'>
+            {/* <div id='services' className='h-[70vh] w-screen overflow-y-hidden relative max-sm:h-[120vh] max-sm:overflow-x-hidden max-[380px]:h-[155vh] max-xl:h-[50vh]'>
                 <motion.div
                 initial={{translateX:-50}}
                 whileInView={{translateX:0}}
@@ -305,7 +479,7 @@ export default function Catering() {
                         </span>
                       </motion.div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Frenzy */}
             <motion.div
@@ -322,8 +496,8 @@ export default function Catering() {
                 
             </motion.div>
 
-            {/* Haircut Prices */}
-            <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
+            {/* Kitchen Prices */}
+            {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
                 <motion.div
                 initial={{ translateX:50}}
                 whileInView={{translateX:0}}
@@ -385,7 +559,7 @@ export default function Catering() {
                         </div>
                     </motion.div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Working hours */}
             <div className='w-full bg-gray-950 h-fit py-10 relative pt-36 px-[350px] max-sm:px-5 max-sm:pt-28 max-xl:px-5' >

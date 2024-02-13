@@ -121,7 +121,7 @@ export default function Home() {
                 <DropdownMenu>
                     <DropdownMenuTrigger><FaBars color="black" /></DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuLabel>Services</DropdownMenuLabel>
+                      <DropdownMenuLabel>Explore our Services</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
                         <Link href='/saloon'>MCM Hair Beauty Salon</Link>
@@ -179,7 +179,7 @@ export default function Home() {
                               <span className="w-full h-full bg-black/25 absolute"></span>
                               <div className="absolute w-full h-full z-30 px-5 py-5 flex flex-col justify-between">
                                 <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Hair <br className="max-sm:hidden" /> Beauty saloon</h1>
-                                <Link href="/saloon" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
+                                <Link href="/salon" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
                                     <span>Explore</span>
                                     <PiCaretRight className="text-4xl animate-pulse max-sm:text-xl" />
                                 </Link>
@@ -213,7 +213,7 @@ export default function Home() {
                             <br className="max-lg:block hidden" /><form action="mailto:mcm.kitchens2024@gmail.com">Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></form>
                           </h6>
                           <h6 className="xl:text-sm xl:w-[60%] xl:text-left  max-lg:w-[60%] max-lg:text-lg lg:text-center lg:text-[18px] lg:tracking-wider lg:leading-8 lg:w-[40%] xl:tracking-normal max-sm:text-sm max-[380px]:text-[12px] max-[380px]:hidden">
-                            233 Amberwind circle, <br className="max-lg:block hidden" /> Oakley California&#46;
+                            327 Filbert Court&#44; <br className="max-lg:block hidden" /> Oakley California&#44; USA&#44; 94561&#46;
                           </h6>
 
                           {/* <Contact /> */}
@@ -225,7 +225,7 @@ export default function Home() {
                                 <DrawerDescription>
                                   <div className="text-center mt-5">
                                       <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
-                                      <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
+                                      <form action="mailto:mcm.kitchens2024@gmail.com">Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></form>
                                       <br />
                                       <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
                                   </div>
@@ -238,10 +238,7 @@ export default function Home() {
                                 </DrawerDescription>
                               </DrawerHeader>
                             </DrawerContent>
-                          </Drawer>
-
-                          
-
+                          </Drawer>              
                       </div>
                 </div>
             </div>
