@@ -60,36 +60,6 @@ export default function Home() {
     swiper_3
 ]
 
-// const Contact = () => {
-//   return(
-//     <>
-//       <Dialog>
-//         <DialogTrigger>
-//             <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px]">Reach us</Button>
-//         </DialogTrigger>
-//         <DialogContent>
-//           <DialogHeader>
-//             <DialogTitle>Reach us</DialogTitle>
-//             <DialogDescription>
-//               <div className="text-center mt-5">
-//                 <h1 className="italiana text-xl font-semibold mb-5">MCM Kitchen & Hair Beauty Saloon</h1>
-//                 <div>Email: <button className="underline text-blue-400 font-semibold tracking-wide">mcm.kitchens2024@gmail.com</button></div>
-//                 <div>Call us: <a href="tel:+12094609825"  className="underline text-blue-400 tracking-wide font-semibold">+1 209-460-9825</a></div>
-//               </div>
-//               <div className="text-center mt-5 font-semibold">
-//                 or send us a Message
-//               </div>
-//             </DialogDescription>
-//           </DialogHeader>
-//         </DialogContent>
-//       </Dialog>
-//     </>
-//   )
-// }
-
-
-
-
   return (
     <>
         <section className="w-full h-screen overflow-y-hidden">

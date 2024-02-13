@@ -5,10 +5,6 @@ import { motion } from 'framer-motion';
 import model from "../images/IMG-20240210-WA0012.jpg"
 import rate from "../images/IMG-20240210-WA0022.jpg"
 import freenzy from "../images/HD-wallpaper-black-hair-model-girls-model-removebg-preview (1).png"
-import highlight from "../images/icons8-woman-head-50.png"
-import haircare from "../images/icons8-hairdryer-64.png"
-import haircut from "../images/icons8-haircut-50.png"
-import services from "../images/cc270c2ec0855e4ad3d9b6988b0caaa7.jpeg"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay, EffectCards, Pagination, Navigation } from 'swiper/modules'
 import "swiper/css/navigation";
