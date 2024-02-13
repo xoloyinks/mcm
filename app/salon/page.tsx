@@ -222,7 +222,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold py-3'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
@@ -240,7 +240,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold relative text-left'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
                                         <span className='absolute text-xl -bottom-5 -right-4 italiana text-gray-400 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
