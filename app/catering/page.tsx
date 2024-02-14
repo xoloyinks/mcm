@@ -286,12 +286,12 @@ export default function Catering() {
                                     <DialogTitle>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
                                     <div className='w-6/12 px-3'>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {food.food}</span><span>{food.price}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {food.food}</span><span>{food.price}</span></p>)}
                                     </div>
                                     <div className='w-5/12 px-3'>
                                         PROTEINS
                                         <hr className='mb-3' />
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {protein.protein}</span><span>{protein.price}</span></p>)}
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {protein.protein}</span><span>{protein.price}</span></p>)}
                                     </div>
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                         
@@ -513,7 +513,7 @@ export default function Catering() {
                     delay: 0.5
                 }}
 
-                className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-sm:w-[90%]' >
+                className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-lg:w-[90%]' >
                     <div className='w-5/12 max-sm:w-full items-center hidden max-sm:flex'>
                         <Image src={gallery_1} alt='Gallery Image' width={0} height={0} className='w-full' />
                     </div>

@@ -209,7 +209,7 @@ export default function Saloon() {
                     delay: 0.5
                 }}
                 >
-                        <div className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl'>
+                        <div className='text-[80px] sacramento text-white gap-3 max-sm:text-[50px] max-[380px]:text-5xl max-[380px]:py-8'>
                             Our Beauty Center
                         </div>
                         <div className='max-xl:hidden'>
@@ -221,7 +221,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold py-3'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
@@ -233,7 +233,7 @@ export default function Saloon() {
                          <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
                             <Dialog>
                                 <DialogTrigger>
-                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-transparent border-2 border-yellow-400">OUR STYLES</Button>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py text-[11px] bg-transparent border-2 border-yellow-400">OUR STYLES</Button>
                                 </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
@@ -371,7 +371,7 @@ export default function Saloon() {
                 delay: 0.5
             }}
             className='w-full flex flex-col gap-5 mt-16'>
-                <div className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-sm:w-[90%]' >
+                <div className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-lg:w-[90%]' >
                     <div className='w-5/12 max-sm:w-full'>
                         <Image src={gallery_1} alt='Gallery Image' width={0} height={0} className='w-full' />
                     </div>
@@ -387,7 +387,7 @@ export default function Saloon() {
                     </div>
                 </div>
             </motion.div>
-        </section>
+            </section>
 
             {/* Haircut Prices */}
             {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
