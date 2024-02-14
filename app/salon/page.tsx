@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import model from "../images/IMG-20240210-WA0012.jpg"
 import freenzy from "../images/HD-wallpaper-black-hair-model-girls-model-removebg-preview (1).png"
-import gallery_1 from "../../images/gallery/IMG-20240210-WA0022.jpg"
-import gallery_2 from "../../images/gallery/IMG-20240210-WA0024.jpg"
-import gallery_3 from "../../images/gallery/IMG-20240210-WA0032.jpg"
-import gallery_4 from "../../images/gallery/IMG-20240210-WA0029.jpg"
-import gallery_5 from "../../images/gallery/IMG-20240210-WA0026.jpg"
+import gallery_1 from "../images/gallery/IMG-20240210-WA0022.jpg"
+import gallery_2 from "../images/gallery/IMG-20240210-WA0024.jpg"
+import gallery_3 from "../images/gallery/IMG-20240210-WA0032.jpg"
+import gallery_4 from "../images/gallery/IMG-20240210-WA0029.jpg"
+import gallery_5 from "../images/gallery/IMG-20240210-WA0026.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay, EffectCards, Pagination, Navigation } from 'swiper/modules'
 import "swiper/css/navigation";
