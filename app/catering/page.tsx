@@ -312,7 +312,7 @@ export default function Catering() {
                                     <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-sm font-semibold relative text-left'>
                                     <div>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food.food}</span><span>{food.price}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food.food}</span><span>{food.price}</span></p>)}
                                     </div> 
                                     <div>
                                         <b>PROTEINS</b>
