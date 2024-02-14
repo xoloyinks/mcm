@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 import model from "../images/IMG-20240210-WA0008.jpg"
 import rate from "../images/IMG-20240210-WA0007.jpg"
 import freenzy from "../images/pexels-nathan-cowley-1153372-removebg-preview.png"
-import seafood from "../images/icons8-crab-50.png"
-import vegetables from "../images/icons8-carrot-50.png"
-import meat from "../images/icons8-meat-50.png"
-import services from "../images/pexels-robin-stickel-70497.jpg"
+import gallery_1 from "../images/IMG-20240210-WA0007.jpg"
+import gallery_2 from "../images/IMG-20240210-WA0005.jpg"
+import gallery_3 from "../images/IMG-20240210-WA0007.jpg"
+import gallery_4 from "../images/IMG-20240210-WA0010.jpg"
+import gallery_5 from "../images/IMG-20240210-WA0009.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay, EffectCards, Pagination, Navigation } from 'swiper/modules'
 import "swiper/css/navigation";
@@ -488,7 +489,7 @@ export default function Catering() {
             transition={{
                 type:"spring",
                 duration:1,
-                delay: 1
+                delay: 0.5
             }}
             className=' bg-gray-950 flex items-center text-white text-[100px] sacramento gap-10 max-sm:flex-col max-sm:pb-5'>
                 <Image alt='Freenzy model' src={freenzy} width={0} height={0} className=' ' />
@@ -496,6 +497,56 @@ export default function Catering() {
                 
             </motion.div>
 
+            {/* Gallery */}
+            <section className='px-20 w-screen pt-10 max-sm:px-3 py-3 mb-5'>
+            <div className='relative  py-5 text-center'>
+                <span className='absolute text-gray-900 text-[80px] -top-10  sacramento font-semibold max-sm:text-6xl max-sm:top-0' >Kitchen</span>
+                <span className='absolute text-white text-4xl italiana'>Gallery</span>
+            </div>
+            <div className='w-full flex flex-col gap-5 mt-16'>
+                <motion.div
+                initial={{opacity:0}}
+                whileInView={{opacity:1}}
+                transition={{
+                    type:"spring",
+                    duration:1,
+                    delay: 0.5
+                }}
+
+                className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-sm:w-[90%]' >
+                    <div className='w-5/12 max-sm:w-full items-center hidden max-sm:flex'>
+                        <Image src={gallery_1} alt='Gallery Image' width={0} height={0} className='w-full' />
+                    </div>
+                    <div className='w-12/12 flex max-sm:flex-col justify-between max-sm:w-full' >
+                        <div className='flex justify-evenly gap-2 max-sm:justify-between max-sm:py-3 pb-5'>
+                            <Image src={gallery_2} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                            <Image src={gallery_3} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                        </div>
+                        <div className='flex justify-evenly gap-2 max-sm:justify-between'>
+                            <Image src={gallery_4} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                            <Image src={gallery_5} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                        </div>
+                    </div>
+                </motion.div>
+                {/* <div className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block' >
+                    <div className='w-5/12 max-sm:w-full'>
+                        <Image src={gallery_6} alt='Gallery Image' width={0} height={0} className='w-full h-[470px] max-sm:h-[410px]' />
+                    </div>
+                    <div className='w-6/12 flex flex-col justify-between max-sm:w-full'>
+                        <div className='flex w-full justify-evenly gap-2 max-sm:justify-between max-sm:py-3'>
+                            <Image src={gallery_7} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                            <Image src={gallery_8} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                        </div>
+                        <div className='flex justify-evenly gap-2 max-sm:justify-between'>
+                            <Image src={gallery_9} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                            <Image src={gallery_10} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
+                        </div>
+                    </div>
+                   
+                </div> */}
+            </div>
+            </section>
+        
             {/* Kitchen Prices */}
             {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
                 <motion.div

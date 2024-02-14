@@ -236,7 +236,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold relative text-left'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-b-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
                                         <span className='absolute text-xl -bottom-5 -right-4 italiana text-gray-400 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
@@ -326,7 +326,7 @@ export default function Saloon() {
                         <h1 className='text-4xl italiana text-yellow-400 max-sm:text-2xl max-sm:pt-16'>About MCM Salon</h1>
                         <p>Lorem ipsum dolor&#44; sit amet consectetur adipisicing elit&#46; Doloremque minus expedita cumque reprehenderit culpa velit commodi nam&#46; Cumque enim quaerat iure obcaecati numquam sit minima&#44; laborum animi voluptates est nisi&#46;</p>
                     </motion.div>
-                    <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-5 max-xl:mt-32 '
+                    <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-0 max-xl:mt-32 '
                      initial={{opacity: 0, translateX:30}}
                      whileInView={{opacity: 1, translateX: 0}}
                      transition={{
@@ -334,7 +334,7 @@ export default function Saloon() {
                          delay:0.5
                      }}
                     >
-                        <Image src={model} alt='Model' width={0} height={500} className=' -translate-x-10 translate-y-5 rounded-3xl' />
+                        <Image src={model} alt='Model' width={0} height={500} className=' -translate-x-10 translate-y-5 rounded-3xl max-sm:-translate-x-5 max-sm:translate-y-3' />
                     </motion.div>
             </div>
 
@@ -345,7 +345,7 @@ export default function Saloon() {
             transition={{
                 type:"spring",
                 duration:1,
-                delay: 1
+                delay: 0.5
             }}
             className=' bg-gray-950 flex items-center text-white text-[100px] sacramento gap-10 max-sm:flex-col '>
                 <Image alt='Freenzy model' src={freenzy} width={0} height={0} className=' ' />
