@@ -5,11 +5,7 @@ import { motion } from 'framer-motion';
 import model from "../images/IMG-20240210-WA0008.jpg"
 import rate from "../images/IMG-20240210-WA0007.jpg"
 import freenzy from "../images/pexels-nathan-cowley-1153372-removebg-preview.png"
-import gallery_1 from "../images/IMG-20240210-WA0007.jpg"
-import gallery_2 from "../images/IMG-20240210-WA0005.jpg"
-import gallery_3 from "../images/IMG-20240210-WA0007.jpg"
-import gallery_4 from "../images/IMG-20240210-WA0010.jpg"
-import gallery_5 from "../images/IMG-20240210-WA0009.jpg"
+import card from "../images/WhatsApp Image 2024-02-22 at 19.13.15_1927c9bs.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay, EffectCards, Pagination, Navigation } from 'swiper/modules'
 import "swiper/css/navigation";
@@ -219,7 +215,8 @@ export default function Catering() {
                     <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-xl:w-[20%]">MCM</Link>
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
-                    <Link href='/'>Home</Link>
+                        <Link href='/'>Home</Link>
+                        <Link href='/gallery'>Gallery</Link>
                         <Link href='#about'>About</Link>
                         <span>
                             <Drawer>
@@ -247,20 +244,22 @@ export default function Catering() {
                         </span>
                     </div>
                     <div className='text-2xl xl:hidden max-xl:w-[20%] max-xl:flex max-xl:justify-end'>
-                    <DropdownMenu>
-                    <DropdownMenuTrigger> <FaBars /></DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                      <DropdownMenuLabel>Menu</DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuItem>
-                        <Link href='/'>Home</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <Link href='#about'>About </Link>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                       
+                        <DropdownMenu>
+                            <DropdownMenuTrigger> <FaBars /></DropdownMenuTrigger>
+                            <DropdownMenuContent>
+                            <DropdownMenuLabel>Menu</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>
+                                <Link href='/'>Home</Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href='/gallery'>Gallery</Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href='#about'>About </Link>
+                            </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </nav>
 
@@ -498,7 +497,7 @@ export default function Catering() {
             </motion.div>
 
             {/* Gallery */}
-            <section className='px-20 w-screen pt-10 max-sm:px-3 py-3 mb-5'>
+            {/* <section className='px-20 w-screen pt-10 max-sm:px-3 py-3 mb-5'>
             <div className='relative  py-5 text-center'>
                 <span className='absolute text-gray-900 text-[80px] -top-10  sacramento font-semibold max-sm:text-6xl max-sm:top-0' >Kitchen</span>
                 <span className='absolute text-white text-4xl italiana'>Gallery</span>
@@ -528,24 +527,8 @@ export default function Catering() {
                         </div>
                     </div>
                 </motion.div>
-                {/* <div className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block' >
-                    <div className='w-5/12 max-sm:w-full'>
-                        <Image src={gallery_6} alt='Gallery Image' width={0} height={0} className='w-full h-[470px] max-sm:h-[410px]' />
-                    </div>
-                    <div className='w-6/12 flex flex-col justify-between max-sm:w-full'>
-                        <div className='flex w-full justify-evenly gap-2 max-sm:justify-between max-sm:py-3'>
-                            <Image src={gallery_7} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                            <Image src={gallery_8} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                        </div>
-                        <div className='flex justify-evenly gap-2 max-sm:justify-between'>
-                            <Image src={gallery_9} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                            <Image src={gallery_10} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                        </div>
-                    </div>
-                   
-                </div> */}
             </div>
-            </section>
+            </section> */}
         
             {/* Kitchen Prices */}
             {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
@@ -669,6 +652,7 @@ export default function Catering() {
             </div>
 
             {/* Contact */}
+            <Image src={card} width={0} height={0} alt='Our Card' className='mx-auto' />
             <div className='h-[60vh] bg-gray-950 py-10 mt-10 relative flex max-sm:flex-col-reverse max-sm:h-fit max-xl:px-5'>
                 <motion.div
                 initial={{ translateX:50}}
