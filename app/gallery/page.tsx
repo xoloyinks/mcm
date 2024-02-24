@@ -63,9 +63,9 @@ if (!isMounted) {
         <section className='relative w-screen overflow-x-hidden'>
             <nav className='fixed z-40'>
                     {/* Mobile view Brand title */}
-                    <div className="italiana font-semibold text-black absolute z-20 text-center w-full py-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
-                    <div className="flex justify-between items-center px-20 py-8 text-black w-screen max-sm:px-5 max-sm:py-6 bg-white font-semibold max-sm:text-sm" >
-                        <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-xl:w-[20%]">MCM</Link>
+                    <div className="italiana font-semibold text-black absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
+                    <div className="flex justify-between items-center px-20 py-8 text-black w-screen max-sm:px-5 max-sm:py-4 bg-white font-semibold max-sm:text-sm max-sm:pt-8" >
+                        <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-2xl max-xl:w-[20%]">MCM</Link>
                         <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                             <Link href='/'>Home</Link>
@@ -145,7 +145,7 @@ if (!isMounted) {
                       <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]' >
                         <ReactPlayer
                         url={vid2}
-                        controls={true}
+                        controls={false}
                         playing={true}
                         loop={true}
                         muted={true}
