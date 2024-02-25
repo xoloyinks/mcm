@@ -1,5 +1,5 @@
-import "../globals.css"
-import "../style.css"
+import "../../globals.css"
+import "../../style.css"
 
 export const metadata = {
   title: 'MCM Hair Beauty Salon',

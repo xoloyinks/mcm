@@ -28,19 +28,19 @@ import {
   } from "@/components/ui/dropdown-menu"
 import { FaBars } from 'react-icons/fa'
 
-import image1 from "../images/gallery/WhatsApp Image 2024-02-21 at 18.12.16_5e30ae29_LE_auto_x2.jpg"
-import image2 from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.04_c3e937f6.jpg"
-import image3 from "../images/gallery/IMG-20240210-WA0008.jpg"
-import image4 from "../images/gallery/IMG-20240210-WA0007_LE_auto_x2.jpg"
-import image5 from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.04_4165e319.jpg"
-import image6 from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.04_80416f03.jpg"
-import image7 from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.04_a6855199.jpg"
-import image8 from "../images/gallery/IMG-20240210-WA0018.jpg"
-import image10 from "../images/gallery/IMG-20240210-WA0017.jpg"
-import image9 from "../images/gallery/IMG-20240210-WA0004.jpg"
-import image11 from "../images/gallery/IMG-20240210-WA0003.jpg"
-import image12 from "../images/gallery/IMG-20240210-WA0005.jpg"
-import image13 from "../images/gallery/WhatsApp Image 2024-02-21 at 18.12.16_47326e0c.jpg"
+import image2 from "../../images/gallery/IMG-20240210-WA0027.jpg"
+import image3 from "../../images/gallery/IMG-20240210-WA0033.jpg"
+import image1 from "../../images/gallery/IMG-20240210-WA0016.jpg"
+import image4 from "../../images/gallery/IMG-20240210-WA0035.jpg"
+import image5 from "../../images/gallery/IMG-20240210-WA0032.jpg"
+import image6 from "../../images/gallery/IMG-20240210-WA0030.jpg"
+import image7 from "../../images/gallery/IMG-20240210-WA0023.jpg"
+import image8 from "../../images/gallery/IMG-20240210-WA0011.jpg"
+import image10 from "../../images/gallery/IMG-20240210-WA0031.jpg"
+import image9 from "../../images/IMG-20240210-WA0015.jpg"
+import image11 from "../../images/gallery/IMG-20240210-WA0022.jpg"
+import image12 from "../../images/gallery/IMG-20240210-WA0014.jpg"
+import image13 from "../../images/gallery/WhatsApp Image 2024-02-21 at 18.12.16_47326e0c.jpg"
 import Image from 'next/image'
 export default function Gallery() {
   const currentYear = new Date();
@@ -66,11 +66,11 @@ if (!isMounted) {
                     <div className="italiana font-semibold text-black absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
                     <div className="flex justify-between items-center px-20 py-8 text-black w-screen max-sm:px-5 max-sm:py-4 bg-white font-semibold max-sm:text-sm max-sm:pt-8" >
                         <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-2xl max-xl:w-[20%]">MCM</Link>
-                        <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN GALLERY</div>
+                        <div className="italiana font-semibold max-sm:hidden">MCM SALON GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                             <Link href='/'>Home</Link>
                             <span  className='text-slate-400 cursor-default'>Gallery</span>
-                            <Link href='/catering'>Kitchen</Link>
+                            <Link href='/salon'>Salon</Link>
                             <span>
                                 <Drawer>
                                     <DrawerTrigger>Reach us</DrawerTrigger>
@@ -106,7 +106,7 @@ if (!isMounted) {
                                     <Link href='/'>Home</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <Link href='/catering'>Kitchen</Link>
+                                    <Link href='/salon'>Salon</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
                                     <Link href='#about'>About </Link>
@@ -117,45 +117,19 @@ if (!isMounted) {
                     </div>
             </nav>
  
-            <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20'>
-                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[80vh]'>
+            <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20 mt-20'>
+                <div className='w-full flex h-[50vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[50vh]'>
                     <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
                     <Image src={image2} alt="Fries" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
                     <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                 </div>
-                <div className='flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] '>
-                    <Image src={image4} alt="Fries" width={0} height={0} className='xl:w-[42%] sm:w-[40%]' />
-                    <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]'>
-                        <ReactPlayer
-                        url={vid1}
-                        controls={false}
-                        playing={true}
-                        loop={true}
-                        muted={true}
-                        light={false}
-                        pip={true}
-                        // style={{height: '600px'}}
-                        height={610}
-                      />
-                      <source src={vid1} type="video/mp4" className='w-full hidden' />
-                    </div>
+                <div className='flex h-[80vh] xl:h-[80vh] max-sm:block sm:h-[35vh] '>
+                    <Image src={image4} alt="Fries" width={0} height={0} className='xl:w-[40%] sm:w-[40%]' />
+                    <Image src={image11} alt='Link' width={0} height={0} className='w-[25%] max-sm:w-full' />
                     <Image src={image5} alt="Fries" width={0} height={0} className='xl:w-[35%] sm:w-[30%]' />
                 </div>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit bg-black sm:h-[40vh] xl:h-[80vh]'>
-                      <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]' >
-                        <ReactPlayer
-                        url={vid2}
-                        controls={false}
-                        playing={true}
-                        loop={true}
-                        muted={true}
-                        light={false}
-                        pip={true}
-                        // style={{height: '600px'}}
-                        height={610}
-                      />
-                      <source src={vid2} type="video/mp4" className='w-full hidden' />
-                    </div>
+                    <Image src={image12} alt='Link' width={0} height={0} className='w-[23%] max-sm:w-full' />
                     <Image src={image6} alt="Fries" width={0} height={0} className=' sm:w-[35%] xl:w-[35%]' />
                     <Image src={image7} alt="Fries" width={0} height={0} className='xl:w-[42%]' />
                 </div>
@@ -164,11 +138,11 @@ if (!isMounted) {
                     <Image src={image9} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image10} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                 </div>
-                <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] '>
+                {/* <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] '>
                     <Image src={image11} alt="Fries" width={0} height={0} className='sm:w-[42%] ' />
                     <Image src={image12} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image13} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
-                </div>
+                </div> */}
 
                 {/* Contact */}
              <div className='h-[60vh] bg-gray-950 py-10 relative flex max-sm:flex-col-reverse max-sm:h-fit max-xl:px-5'>

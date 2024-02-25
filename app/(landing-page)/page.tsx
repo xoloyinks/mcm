@@ -70,14 +70,14 @@ export default function Home() {
                 <div className="italiana text-4xl w-[35%] max-sm:text-2xl ">MCM</div>
                 <div className="italiana font-semibold max-sm:hidden max-lg:text-sm w-[55%] text-center xl:text-center">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
                 <div className="xl:flex hidden gap-5 w-[35%] justify-end xl:">
-                  <Link href='/'>Home</Link>
+                  <div className="text-slate-300 cursor-default">Home</div>
                   <DropdownMenu>
                     <DropdownMenuTrigger>Services</DropdownMenuTrigger>
                     <DropdownMenuContent>
                       <DropdownMenuLabel>Our services</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
-                        <Link href='/saloon'>MCM Beauty Hair saloon</Link>
+                        <Link href='/salon'>MCM Beauty Hair salon</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href='/catering'>MCM Kitchen </Link>

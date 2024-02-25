@@ -63,98 +63,31 @@ const effectImages = [
 ]
 
 const foods = [
-    {
-        food: "Nigerian Jollof Rice",
-        price : "$20"
-    },
-    {
-        food: "Nigerian Fried Rice",
-        price : "$20"
-    },
-    {
-        food: "Ofada Rice & Sauce(Ayamase)",
-        price : "$20"
-    },
-    {
-        food: "Amala with Gbegiri & Ewedu",
-        price : "$20"
-    },
-    {
-        food: "Yam Porridge",
-        price : "$20"
-    },
-    {
-        food: "Ekuru",
-        price : "$20"
-    },
-    {
-        food: "Ewa Aganyin with Sauce",
-        price : "$20"
-    },
-    {
-        food: "Moi-Moi",
-        price : "$20"
-    },
-    {
-        food: "Meat Pies",
-        price : "$20"
-    },
-    {
-        food: "Sussage Rolls",
-        price : "$20"
-    },
-    {
-        food: "Bread Rolls",
-        price : "$20"
-    },
-    {
-        food: "Egusi Soup",
-        price : "$20"
-    },
-    {
-        food: "Vegetables Soup(Efo-riro)",
-        price : "$20"
-    },
-    {
-        food: "Plain Rice Stew",
-        price : "$20"
-    },
-    {
-        food: "Okra Soup",
-        price : "$20"
-    },
-
-    {
-        food: "Pepper Soup",
-        price : "$20"
-    }
+    "Nigerian Jollof Rice",
+    "Nigerian Fried Rice",
+    "Ofada Rice & Sauce(Ayamase)",
+    "Amala with Gbegiri & Ewedu",
+    "Yam Porridge",
+    "Ekuru",
+    "Ewa Aganyin with Sauce",
+    "Moi-Moi",
+    "Meat Pies",
+    "Sussage Rolls",
+    "Bread Rolls",
+    "Egusi Soup",
+    "Vegetables Soup(Efo-riro)",
+    "Plain Rice Stew",
+    "Okra Soup",
+    "Pepper Soup"
 ]
 
 const proteins = [
-    {
-        protein: "Grilled Chicken",
-        price: "$120"
-    },
-    {
-        protein: "Fried Chicken",
-        price: "$120"
-    },
-    {
-        protein: "Peppered Beef",
-        price: "$120"
-    },
-    {
-        protein: "Fried Beef",
-        price: "$120"
-    },
-    {
-        protein: "Peppered Fish",
-        price: "$120"
-    },
-    {
-        protein: "Fried Fish",
-        price: "$120"
-    }
+    "Grilled Chicken",
+    "Fried Chicken",
+    "Peppered Beef",
+    "Fried Beef",
+    "Peppered Fish",
+    "Fried Fish"
 ]
 
 export default function Catering() {
@@ -216,7 +149,7 @@ export default function Catering() {
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                         <Link href='/'>Home</Link>
-                        <Link href='/gallery'>Gallery</Link>
+                        <Link href='/catering/gallery'>Gallery</Link>
                         <Link href='#about'>About</Link>
                         <span>
                             <Drawer>
@@ -253,7 +186,7 @@ export default function Catering() {
                                 <Link href='/'>Home</Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Link href='/gallery'>Gallery</Link>
+                                <Link href='/catering/gallery'>Gallery</Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                                 <Link href='#about'>About </Link>
@@ -285,12 +218,12 @@ export default function Catering() {
                                     <DialogTitle>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
                                     <div className='w-6/12 px-3'>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {food.food}</span><span>{food.price}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}. {food}</span></p>)}
                                     </div>
                                     <div className='w-5/12 px-3'>
                                         PROTEINS
                                         <hr className='mb-3' />
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}.   {protein.protein}</span><span>{protein.price}</span></p>)}
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}. {protein}</span></p>)}
                                     </div>
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                         
@@ -311,12 +244,12 @@ export default function Catering() {
                                     <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-sm font-semibold relative text-left'>
                                     <div>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food.food}</span><span>{food.price}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food}</span></p>)}
                                     </div> 
                                     <div>
                                         <b>PROTEINS</b>
                                         <hr className='mb-3' />
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {protein.protein}</span><span>{protein.price}</span></p>)}
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46; {protein}</span></p>)}
                                     </div>
                                         
                                     </DialogDescription>

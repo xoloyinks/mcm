@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import spinner from "../images/Rolling-0.6s-50px.svg"
+import spinner from "../../images/Rolling-0.6s-50px.svg"
 
 export default function Loading() {
     // You can add any UI inside Loading, including a Skeleton.

@@ -66,34 +66,13 @@ const effectImages = [
 ]
 
 const hair_styles = [
-    {
-        style: "Braids",
-        price : "$20"
-    },
-    {
-        style: "Dread Locks",
-        price : "$20"
-    },
-    {
-        style: "Crotchet",
-        price : "$20"
-    },
-    {
-        style: "Didi",
-        price : "$20"
-    },
-    {
-        style: "Weaving",
-        price : "$20"
-    },
-    {
-        style: "Wiggin",
-        price : "$20"
-    },
-    {
-        style: "Kinky",
-        price : "$20"
-    }
+   "Braids",
+   "Dread Locks",
+   "Crotchet",
+   "Didi",
+   "Weaving",
+   "Wiggin",
+   "Kinky"
 ]
 
 
@@ -152,6 +131,7 @@ export default function Saloon() {
                     <div className="italiana font-semibold max-sm:hidden">MCM HAIR BEAUTY SALON</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                         <Link href='/'>Home</Link>
+                        <Link href='/salon/gallery'>Gallery</Link>
                         <Link href='#about'>About</Link>
                         <span>
                             <Drawer>
@@ -221,7 +201,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold py-3'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style}</span></p>)}
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
@@ -239,7 +219,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold relative text-left'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style.style}</span><span>{style.price}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46; {style}</span></p>)}
                                         <span className='absolute text-xl -bottom-5 -right-4 italiana text-gray-400 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
