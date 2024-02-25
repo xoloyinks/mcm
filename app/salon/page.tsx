@@ -170,6 +170,9 @@ export default function Saloon() {
                         <Link href='/'>Home</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
+                        <Link href='/salon/gallery'>Gallery</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
                         <Link href='#about'>About </Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -335,39 +338,6 @@ export default function Saloon() {
                 <span className='max-sm:text-6xl max-[380px]:text-5xl max-[380px]:pb-5 max-xl:text-[70px] max-xl:pr-24 max-sm:pr-0'>Hair Treatment</span>
                 
             </motion.div>
-            
-            {/* Gallery */}
-            <section className='px-20 w-screen pt-10 max-sm:px-3 py-3 mb-5'>
-            <div className='relative  py-5 text-center'>
-                <span className='absolute text-gray-900 text-[80px] -top-10  sacramento font-semibold max-sm:text-6xl max-sm:top-0' >Beauty</span>
-                <span className='absolute text-white text-4xl italiana'>Gallery</span>
-            </div>
-            <motion.div
-            initial={{opacity:0}}
-            whileInView={{opacity:1}}
-            transition={{
-                type:"spring",
-                duration:1,
-                delay: 0.5
-            }}
-            className='w-full flex flex-col gap-5 mt-16'>
-                <div className='flex h-fit w-[70%] mx-auto gap-2 max-sm:block max-lg:w-[90%]' >
-                    <div className='w-5/12 max-sm:w-full'>
-                        <Image src={gallery_1} alt='Gallery Image' width={0} height={0} className='w-full' />
-                    </div>
-                    <div className='w-6/12 flex flex-col justify-between max-sm:w-full' >
-                        <div className='flex w-full justify-evenly gap-2 max-sm:justify-between max-sm:py-3'>
-                            <Image src={gallery_2} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                            <Image src={gallery_3} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                        </div>
-                        <div className='flex justify-evenly gap-2 max-sm:justify-between'>
-                            <Image src={gallery_4} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                            <Image src={gallery_5} alt='Gallery Image' width={0} height={0} className='w-[45%] max-sm:w-[48%]' />
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-            </section>
 
             {/* Haircut Prices */}
             {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
