@@ -310,7 +310,12 @@ export default function Saloon() {
                      }}
                     >
                         <h1 className='text-4xl italiana text-yellow-400 max-sm:text-2xl max-sm:pt-16'>About MCM Salon</h1>
-                        <p>Lorem ipsum dolor&#44; sit amet consectetur adipisicing elit&#46; Doloremque minus expedita cumque reprehenderit culpa velit commodi nam&#46; Cumque enim quaerat iure obcaecati numquam sit minima&#44; laborum animi voluptates est nisi&#46;</p>
+                        <p>Welcome to MCM Hair Beauty Salon&#44; where we craft elegance and style with every strand&#46;
+                            <br />
+                            <br />
+                        At MCM&#44; we believe in the power of quality products and techniques&#44; ensuring your hair receives the care it deserves&#46; Whether you&#39;re looking for a quick touch-up or a complete transformation&#44; our salon is your haven for all things beauty&#46;
+                        </p>
+                        <Link href='/salon/gallery' className="w-fit px-16 py-3 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-yellow-400 rounded-xl text-slate-800 font-semibold max-sm:py-3">Our Gallery</Link>
                     </motion.div>
                     <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-0 max-xl:mt-32 '
                      initial={{opacity: 0, translateX:30}}

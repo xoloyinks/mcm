@@ -20,6 +20,12 @@
 .DS_Store
 *.pem
 
+#mcm zip file
+*.zip
+
+#production server
+server.js
+
 # debug
 npm-debug.log*
 yarn-debug.log*

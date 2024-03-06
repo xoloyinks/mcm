@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import model from "../images/IMG-20240210-WA0008.jpg"
+import model from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.03_c896ff52.jpg"
 import rate from "../images/IMG-20240210-WA0007.jpg"
 import freenzy from "../images/pexels-nathan-cowley-1153372-removebg-preview.png"
 import card from "../images/WhatsApp Image 2024-02-22 at 19.13.15_1927c9bs.jpg"
@@ -339,9 +339,13 @@ export default function Catering() {
                      }}
                     >
                         <h1 className='text-4xl italiana text-yellow-400 max-sm:text-2xl max-sm:pt-16'>About MCM Kitchen</h1>
-                        <p>Lorem ipsum dolor&#44; sit amet consectetur adipisicing elit&#46; Doloremque minus expedita cumque reprehenderit culpa velit commodi nam&#46; Cumque enim quaerat iure obcaecati numquam sit minima&#44; laborum animi voluptates est nisi&#46;</p>
+                        <p>At MCM Kitchen&#44; we deliver classy and high-quality foods made with the freshest African ingredients and using traditional recipes passed down through generations&#46; This ensures that our foods are not only delicious but also the healthiest option available&#46;
+                        <br />
+                        <br />
+                        Our menu is so authentic that you can taste it in your soul&#46; We offer delivery and catering services&#44; catering to both individuals/household consumption and events&#46; Let your appetite take over at MCM Kitchen!</p>
+                        <Link href='/catering/gallery' className="w-fit px-16 py-3 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-yellow-400 rounded-xl text-slate-800 font-semibold max-sm:py-3">Our Gallery</Link>
                     </motion.div>
-                    <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-5 max-xl:mt-32 '
+                    <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-0 max-xl:mt-32 '
                      initial={{opacity: 0, translateX:30}}
                      whileInView={{opacity: 1, translateX: 0}}
                      transition={{
@@ -349,7 +353,7 @@ export default function Catering() {
                          delay:0.5
                      }}
                     >
-                        <Image src={model} alt='Model' width={0} height={500} className=' -translate-x-10 translate-y-5 rounded-3xl' />
+                        <Image src={model} alt='Model' width={0} height={500} className=' -translate-x-10 translate-y-5 rounded-3xl max-sm:-translate-x-5' />
                     </motion.div>
             </div>
 
