@@ -63,9 +63,9 @@ if (!isMounted) {
         <section className='relative w-screen overflow-x-hidden'>
             <nav className='fixed z-40'>
                     {/* Mobile view Brand title */}
-                    <div className="italiana font-semibold text-black absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
-                    <div className="flex justify-between items-center px-20 py-8 text-black w-screen max-sm:px-5 max-sm:py-4 bg-white font-semibold max-sm:text-sm max-sm:pt-8" >
-                        <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-2xl max-xl:w-[20%]">MCM</Link>
+                    <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
+                    <div className="flex justify-between items-center px-20 py-8 text-yellow-400 w-screen max-sm:px-5 max-sm:py-4 bg-transparent font-semibold max-sm:text-sm max-sm:pt-8" >
+                        <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-3xl max-xl:w-[20%]">MCM</Link>
                         <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                             <Link href='/'>Home</Link>
@@ -119,8 +119,8 @@ if (!isMounted) {
  
             <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20'>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[80vh]'>
-                    <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
                     <Image src={image2} alt="Fries" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
+                    <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
                     <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                 </div>
                 <div className='flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] '>

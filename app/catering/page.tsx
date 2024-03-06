@@ -218,12 +218,11 @@ export default function Catering() {
                                     <DialogTitle>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
                                     <div className='w-6/12 px-3'>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}. {food}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {food} -</span></p>)}
                                     </div>
-                                    <div className='w-5/12 px-3'>
-                                        PROTEINS
-                                        <hr className='mb-3' />
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}. {protein}</span></p>)}
+                                    <div className='w-5/12 px-3 text-center'>
+                                        <span className='pb-6'>PROTEINS</span>
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center  mb-4 mt-6'><span>- {protein} -</span></p>)}
                                     </div>
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                         
@@ -244,12 +243,11 @@ export default function Catering() {
                                     <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
                                     <DialogDescription className='text-black text-sm font-semibold relative text-left'>
                                     <div>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {food}</span></p>)}
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mt-4 mb-4'><span>- {food} -</span></p>)}
                                     </div> 
                                     <div>
-                                        <b>PROTEINS</b>
-                                        <hr className='mb-3' />
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-between border-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46; {protein}</span></p>)}
+                                        <span className='justify-center w-full py-4 font-bold mx-auto flex'>PROTEINS</span>
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {protein} -</span></p>)}
                                     </div>
                                         
                                     </DialogDescription>

@@ -204,7 +204,7 @@ export default function Saloon() {
                                     <DialogHeader>
                                     <DialogTitle>STYLES</DialogTitle>
                                     <DialogDescription className='text-black text-md font-semibold py-3'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46;   {style}</span></p>)}
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {style} -</span></p>)}
                                         <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
@@ -216,13 +216,13 @@ export default function Saloon() {
                          <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
                             <Dialog>
                                 <DialogTrigger>
-                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py text-[11px] bg-transparent border-2 border-yellow-400">OUR STYLES</Button>
+                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]: text-[11px] bg-transparent border-2 border-yellow-400">OUR STYLES</Button>
                                 </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
-                                    <DialogTitle>STYLES</DialogTitle>
-                                    <DialogDescription className='text-black text-md font-semibold relative text-left'>
-                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-between border-b-2 border-b-gray-300 border-dotted mb-4'><span>{key+1}&#46; {style}</span></p>)}
+                                    <DialogTitle className='pb-6'>STYLES</DialogTitle>
+                                    <DialogDescription className='text-black text-md font-semibold relative text-left pt-5'>
+                                    {hair_styles.map((style, key) => <p key={key} className='flex items-center justify-center border-dotted mb-4 italiana'><span> - {style} -</span></p>)}
                                         <span className='absolute text-xl -bottom-5 -right-4 italiana text-gray-400 z-50'>MCM</span>
                                     </DialogDescription>
                                     </DialogHeader>
