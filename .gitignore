@@ -23,8 +23,8 @@
 #mcm zip file
 *.zip
 
-#production server
-server.js
+# #production server
+# server.js
 
 # debug
 npm-debug.log*

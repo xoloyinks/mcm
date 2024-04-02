@@ -85,7 +85,7 @@ export default function Home() {
                     </DropdownMenuContent>
                   </DropdownMenu>
 
-                  <Link href='/'>About</Link>
+                  {/* <Link href='/'>About</Link> */}
                 </div>
                 <div className=" xl:hidden w-[20%] flex justify-end">
                 <DropdownMenu>

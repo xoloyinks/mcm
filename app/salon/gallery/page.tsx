@@ -122,7 +122,6 @@ if (!isMounted) {
                     <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                     <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
                     <Image src={image2} alt="Fries" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
-                    
                 </div>
                 <div className='flex h-[80vh] xl:h-[70vh] max-sm:block sm:h-[35vh] '>
                     <Image src={image4} alt="Fries" width={0} height={0} className='xl:w-[40%] sm:w-[40%]' />
