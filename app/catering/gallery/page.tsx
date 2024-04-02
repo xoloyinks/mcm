@@ -119,12 +119,12 @@ if (!isMounted) {
  
             <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20'>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[80vh]'>
-                    <Image src={image2} alt="Fries" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
-                    <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
-                    <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
+                    <Image src={image2} alt="Sussage Rolls" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
+                    <Image src={image1} alt="Buns $ Fried Chicken" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
+                    <Image src={image3} alt="Bread Rolls " width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                 </div>
                 <div className='flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] '>
-                    <Image src={image4} alt="Fries" width={0} height={0} className='xl:w-[42%] sm:w-[40%]' />
+                    <Image src={image4} alt="Nigerian Jollof $ Fried Rice" width={0} height={0} className='xl:w-[42%] sm:w-[40%]' />
                     <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]'>
                         <ReactPlayer
                         url={vid1}
@@ -134,12 +134,11 @@ if (!isMounted) {
                         muted={true}
                         light={false}
                         pip={true}
-                        // style={{height: '600px'}}
                         height={610}
                       />
                       <source src={vid1} type="video/mp4" className='w-full hidden' />
                     </div>
-                    <Image src={image5} alt="Fries" width={0} height={0} className='xl:w-[35%] sm:w-[30%]' />
+                    <Image src={image5} alt="Nigerian Jollof" width={0} height={0} className='xl:w-[35%] sm:w-[30%]' />
                 </div>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit bg-black sm:h-[40vh] xl:h-[80vh]'>
                       <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]' >
@@ -156,18 +155,18 @@ if (!isMounted) {
                       />
                       <source src={vid2} type="video/mp4" className='w-full hidden' />
                     </div>
-                    <Image src={image6} alt="Fries" width={0} height={0} className=' sm:w-[35%] xl:w-[35%]' />
-                    <Image src={image7} alt="Fries" width={0} height={0} className='xl:w-[42%]' />
+                    <Image src={image6} alt="Nigerian Jollof" width={0} height={0} className=' sm:w-[35%] xl:w-[35%]' />
+                    <Image src={image7} alt="Fried Rice" width={0} height={0} className='xl:w-[42%]' />
                 </div>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh] '>
-                    <Image src={image8} alt="Fries" width={0} height={0} className='xl:w-[42%]' />
-                    <Image src={image9} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
-                    <Image src={image10} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
+                    <Image src={image8} alt="Ewa Aganyin with Sauce" width={0} height={0} className='xl:w-[42%]' />
+                    <Image src={image9} alt="Vegetables Soup(Efo-riro)" width={0} height={0} className='xl:w-[30%]' />
+                    <Image src={image10} alt="Fried Chicken" width={0} height={0} className='xl:w-[30%]' />
                 </div>
                 <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] '>
-                    <Image src={image11} alt="Fries" width={0} height={0} className='sm:w-[42%] ' />
-                    <Image src={image12} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
-                    <Image src={image13} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
+                    <Image src={image11} alt="Buns" width={0} height={0} className='sm:w-[42%] ' />
+                    <Image src={image12} alt="Meat Pies" width={0} height={0} className='xl:w-[30%]' />
+                    <Image src={image13} alt="Egusi Soup" width={0} height={0} className='xl:w-[30%]' />
                 </div>
 
                 {/* Contact */}

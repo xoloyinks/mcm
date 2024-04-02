@@ -94,7 +94,7 @@ export default function Home() {
                       <DropdownMenuLabel>Explore our Services</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem>
-                        <Link href='/saloon'>MCM Hair Beauty Salon</Link>
+                        <Link href='/salon'>MCM Hair Beauty Salon</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href='/catering'>MCM Kitchen </Link>
