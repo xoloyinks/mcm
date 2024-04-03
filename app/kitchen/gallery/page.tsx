@@ -70,7 +70,7 @@ if (!isMounted) {
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                             <Link href='/'>Home</Link>
                             <span  className='text-slate-400 cursor-default'>Gallery</span>
-                            <Link href='/catering'>Kitchen</Link>
+                            <Link href='/kitchen'>Kitchen</Link>
                             <span>
                                 <Drawer>
                                     <DrawerTrigger>Reach us</DrawerTrigger>
@@ -106,7 +106,7 @@ if (!isMounted) {
                                     <Link href='/'>Home</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <Link href='/catering'>Kitchen</Link>
+                                    <Link href='/kitchen'>Kitchen</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
                                     <Link href='#about'>About </Link>

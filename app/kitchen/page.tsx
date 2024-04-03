@@ -149,7 +149,7 @@ export default function Catering() {
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                         <Link href='/'>Home</Link>
-                        <Link href='/catering/gallery'>Gallery</Link>
+                        <Link href='/kitchen/gallery'>Gallery</Link>
                         <Link href='#about'>About</Link>
                         <span>
                             <Drawer>
@@ -186,7 +186,7 @@ export default function Catering() {
                                 <Link href='/'>Home</Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Link href='/catering/gallery'>Gallery</Link>
+                                <Link href='/kitchen/gallery'>Gallery</Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                                 <Link href='#about'>About </Link>

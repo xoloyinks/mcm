@@ -65,9 +65,9 @@ export default function Home() {
         <section className="w-full h-screen overflow-y-hidden">
 
           {/* Nav */}
-            <div className="italiana font-semibold sm:hidden w-full text-center text-[10px] py-2 max-sm:text-sm max-[380px]:text-[11px]">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
+            <div className="italiana font-semibold sm:hidden w-full text-center text-[10px] py-2 max-sm:text-sm max-[380px]:text-[11px] bg-gray-600/50 text-black">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
             <nav className="flex justify-between items-center px-20 py-8 max-lg:px-10 max-sm:px-5 max-sm:py-2">
-                <div className="italiana text-4xl w-[35%] max-sm:text-2xl ">MCM</div>
+                <div className="italiana text-4xl w-[35%] max-sm:text-3xl max-sm:font-semibold">MCM</div>
                 <div className="italiana font-semibold max-sm:hidden max-lg:text-sm w-[55%] text-center xl:text-center">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
                 <div className="xl:flex hidden gap-5 w-[35%] justify-end xl:">
                   <div className="text-slate-300 cursor-default">Home</div>
@@ -80,7 +80,7 @@ export default function Home() {
                         <Link href='/salon'>MCM Beauty Hair salon</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Link href='/catering'>MCM Kitchen </Link>
+                        <Link href='/kitchen'>MCM Kitchen </Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -89,7 +89,7 @@ export default function Home() {
                 </div>
                 <div className=" xl:hidden w-[20%] flex justify-end">
                 <DropdownMenu>
-                    <DropdownMenuTrigger><FaBars color="black" /></DropdownMenuTrigger>
+                    <DropdownMenuTrigger><FaBars color="black" className="max-sm:text-2xl" /></DropdownMenuTrigger>
                     <DropdownMenuContent>
                       <DropdownMenuLabel>Explore our Services</DropdownMenuLabel>
                       <DropdownMenuSeparator />
@@ -97,7 +97,7 @@ export default function Home() {
                         <Link href='/salon'>MCM Hair Beauty Salon</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Link href='/catering'>MCM Kitchen </Link>
+                        <Link href='/kitchen'>MCM Kitchen </Link>
                       </DropdownMenuItem>
                       {/* <DropdownMenuItem>
                         <Link href='#about'>About </Link>
@@ -161,7 +161,7 @@ export default function Home() {
                             <span className="w-full h-full bg-black/25 absolute z-10"></span>
                             <div className="absolute w-full h-full z-30 px-5 py-5 flex flex-col justify-between">
                             <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Kitchen</h1>
-                                <Link href="/catering" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
+                                <Link href="/kitchen" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
                                     <span>Explore</span>
                                     <PiCaretRight className="text-4xl animate-pulse max-sm:text-xl" />
                                 </Link>
