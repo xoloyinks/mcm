@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import Map from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+
 import {
     Drawer,
     DrawerContent,
@@ -52,16 +53,19 @@ const [isMounted, setIsMounted] = useState(false);
     setIsMounted(true);
 }, []);
 
+
+
 if (!isMounted) {
     return null;
-  }
+}
 
   let vid1 = '/videos/WhatsApp Video 2024-02-21 at 20.23.04_ea279878.mp4'
   let vid2 = '/videos/WhatsApp Video 2024-02-21 at 20.23.04_21a8721a.mp4'
   return (
     <>
         <section className='relative w-screen overflow-x-hidden'>
-            <nav className='fixed z-40'>
+      
+            <nav className={`fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl`}>
                     {/* Mobile view Brand title */}
                     <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
                     <div className="flex justify-between items-center px-20 py-8 text-yellow-400 w-screen max-sm:px-5 max-sm:py-4 bg-transparent font-semibold max-sm:text-sm max-sm:pt-8" >
@@ -116,9 +120,10 @@ if (!isMounted) {
                         </div>
                     </div>
             </nav>
+            
  
-            <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20'>
-                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[80vh]'>
+            <section id='gallery' className='w-full  h-screen max-sm:w-screen bg-black z-20'>
+                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh]  xl:h-[80vh]'>
                     <Image src={image2} alt="Sussage Rolls" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
                     <Image src={image1} alt="Buns $ Fried Chicken" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
                     <Image src={image3} alt="Bread Rolls " width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
