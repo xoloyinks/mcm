@@ -61,7 +61,7 @@ if (!isMounted) {
   return (
     <>
         <section className='relative w-screen overflow-x-hidden'>
-            <nav className='fixed z-40'>
+            <nav className='fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl'>
                     {/* Mobile view Brand title */}
                     <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
                     <div className="flex justify-between items-center px-20 py-8 text-yellow-400 w-screen max-sm:px-5 max-sm:py-4 bg-transparent font-semibold max-sm:text-sm max-sm:pt-8" >
@@ -138,11 +138,7 @@ if (!isMounted) {
                     <Image src={image9} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image10} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                 </div>
-                {/* <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] '>
-                    <Image src={image11} alt="Fries" width={0} height={0} className='sm:w-[42%] ' />
-                    <Image src={image12} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
-                    <Image src={image13} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
-                </div> */}
+
 
                 {/* Contact */}
              <div className='h-[60vh] bg-gray-950 py-10 relative flex max-sm:flex-col-reverse max-sm:h-fit max-xl:px-5'>

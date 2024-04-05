@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
+import { MdOutlineMenuBook } from "react-icons/md";
 import { motion } from 'framer-motion';
 import model from "../images/gallery/WhatsApp Image 2024-02-21 at 20.23.03_c896ff52.jpg"
 import rate from "../images/IMG-20240210-WA0007.jpg"
@@ -90,12 +91,14 @@ const proteins = [
     "Fried Fish"
 ]
 
-export default function Catering() {
+export default function Kitchen(){
 
    
     const [formattedTime, setFormattedTime] = useState('');
     const [isMounted, setIsMounted] = useState(false);
+   
 
+ 
     
 
     const daysOfTheWeek = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -134,17 +137,62 @@ export default function Catering() {
     }
 
 
+
   return (
     <>
-        <section className='w-screen h-fit overflow-x-hidden bg-gray-950'>
 
+                        {/* Floating Menu Desktop */}
+                        <Dialog>
+                            <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-10 cursor-pointer rounded-full p-5 bg-white z-50 bottom-8'>
+                                    <MdOutlineMenuBook className='text-xl' />
+                            </DialogTrigger>
+                                <DialogContent>
+                                    <DialogHeader>
+                                    <DialogTitle>MENU</DialogTitle>
+                                    <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
+                                    <div className='w-6/12 px-3'>
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {food} -</span></p>)}
+                                    </div>
+                                    <div className='w-5/12 px-3 text-center'>
+                                        <span className='pb-6'>PROTEINS</span>
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center  mb-4 mt-6'><span>- {protein} -</span></p>)}
+                                    </div>
+                                        <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                        </Dialog>
+
+                        {/* Floating Menu Mobile view */}
+                            <Dialog>
+                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-5 cursor-pointer rounded-full p-4 bg-white z-50 bottom-10'>
+                                    <MdOutlineMenuBook className='text-xl' />
+                                </DialogTrigger>
+                                <DialogContent>
+                                    <DialogHeader>
+                                    <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
+                                    <DialogDescription className='text-black text-sm font-semibold relative text-left'>
+                                    <div>
+                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mt-4 mb-4'><span>- {food} -</span></p>)}
+                                    </div> 
+                                    <div>
+                                        <span className='justify-center w-full py-4 font-bold mx-auto flex'>PROTEINS</span>
+                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {protein} -</span></p>)}
+                                    </div>
+                                        
+                                    </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+                       
+        <section className='w-screen h-fit overflow-x-hidden bg-gray-950 relative'>
             {/* Banner */}
             <div className='w-screen h-screen overflow-y-hidden relative pb-5'>
                 {/* Mobile view Brand title */}
                 <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full py-2 sm:hidden max-[380px]:text-sm">MCM KITCHEN</div>
 
                 
-                <nav className="flex justify-between items-center px-20 py-8 text-yellow-400 absolute z-40 w-full max-sm:px-5 max-sm:py-12">
+                <nav className={` flex justify-between items-center px-20 py-8 text-yellow-400 absolute z-40 w-full max-sm:px-5 max-sm:py-12`}>
                     <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-xl:w-[20%]">MCM</Link>
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
@@ -236,7 +284,7 @@ export default function Catering() {
                         <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
                             <Dialog>
                                 <DialogTrigger>
-                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-transparent border-2 border-yellow-400">OUR MENU</Button>
+                                    <Button className="w-fit px-12 py-5 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-transparent border-2 border-yellow-400">OUR MENU <MdOutlineMenuBook className='text-xl ml-2' /></Button>
                                 </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
