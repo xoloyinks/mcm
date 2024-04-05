@@ -247,7 +247,7 @@ export default function Saloon() {
                          <div className='gap-5 hidden max-xl:flex max-xl:flex-col'>
                             <Dialog>
                                 <DialogTrigger>
-                                    <Button className="w-fit px-16 py-5 max-lg:mx-auto max-[380px]: text-[11px] bg-transparent border-2 border-yellow-400">OUR STYLES <CgGirl className='text-xl ml-2' /></Button>
+                                    <Button className="w-fit px-12 py-5 max-lg:mx-auto max-[380px]: text-[13px] bg-transparent border-2 border-yellow-400">OUR STYLES <CgGirl className='text-xl ml-2' /></Button>
                                 </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
