@@ -388,7 +388,7 @@ export default function Kitchen(){
                         <br />
                         <br />
                         Our menu is so authentic that you can taste it in your soul&#46; We offer delivery and catering services&#44; catering to both individuals/household consumption and events&#46; Let your appetite take over at MCM Kitchen!</p>
-                        <Link href='/catering/gallery' className="w-fit px-16 py-3 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-yellow-400 rounded-xl text-slate-800 font-semibold max-sm:py-3">Our Gallery</Link>
+                        <Link href='/kitchen/gallery' className="w-fit px-16 py-3 max-lg:mx-auto max-[380px]:py  max-[380px]:text-[12px] bg-yellow-400 rounded-xl text-slate-800 font-semibold max-sm:py-3">Our Gallery</Link>
                     </motion.div>
                     <motion.div className='w-fit rounded-3xl border border-yellow-600/50  max-sm:w-[80%] max-xl:w-[30%] max-sm:mt-0 max-xl:mt-32 '
                      initial={{opacity: 0, translateX:30}}
