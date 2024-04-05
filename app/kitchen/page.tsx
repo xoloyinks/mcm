@@ -140,7 +140,6 @@ export default function Kitchen(){
 
   return (
     <>
-
                         {/* Floating Menu Desktop */}
                         <Dialog>
                             <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-10 cursor-pointer rounded-full p-5 bg-white z-50 bottom-8'>
