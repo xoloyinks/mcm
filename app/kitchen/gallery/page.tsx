@@ -43,6 +43,7 @@ import image11 from "../../images/gallery/IMG-20240210-WA0003.jpg"
 import image12 from "../../images/gallery/IMG-20240210-WA0005.jpg"
 import image13 from "../../images/gallery/WhatsApp Image 2024-02-21 at 18.12.16_47326e0c.jpg"
 import Image from 'next/image'
+import Menu from '../menu';
 export default function Gallery() {
   const currentYear = new Date();
   const year = currentYear.getFullYear();
@@ -64,7 +65,7 @@ if (!isMounted) {
   return (
     <>
         <section className='relative w-screen overflow-x-hidden'>
-      
+            <Menu />
             <nav className={`fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl`}>
                     {/* Mobile view Brand title */}
                     <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
@@ -72,7 +73,6 @@ if (!isMounted) {
                         <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-3xl max-xl:w-[20%]">MCM</Link>
                         <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
-                            <Link href='/'>Home</Link>
                             <span  className='text-slate-400 cursor-default'>Gallery</span>
                             <Link href='/kitchen'>Kitchen</Link>
                             <span>
@@ -122,7 +122,7 @@ if (!isMounted) {
             </nav>
             
  
-            <section id='gallery' className='w-full  h-screen max-sm:w-screen bg-black z-20'>
+            <section id='gallery' className='w-full  h-fit max-sm:w-screen bg-black z-20'>
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[35vh]  xl:h-[80vh]'>
                     <Image src={image2} alt="Sussage Rolls" width={0} height={0} className='xl:w-[30%] w-full sm:w-[30%]' />
                     <Image src={image1} alt="Buns $ Fried Chicken" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
@@ -145,7 +145,7 @@ if (!isMounted) {
                     </div>
                     <Image src={image5} alt="Nigerian Jollof" width={0} height={0} className='xl:w-[35%] sm:w-[30%]' />
                 </div>
-                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit bg-black sm:h-[40vh] xl:h-[80vh]'>
+                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh]'>
                       <div className='w-[23%] flex items-center bg-gradient-to-br from-slate-400 to-slate-900 max-sm:w-full sm:w-[30%] xl:w-[23%]' >
                         <ReactPlayer
                         url={vid2}
@@ -168,7 +168,7 @@ if (!isMounted) {
                     <Image src={image9} alt="Vegetables Soup(Efo-riro)" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image10} alt="Fried Chicken" width={0} height={0} className='xl:w-[30%]' />
                 </div>
-                <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] '>
+                <div className='w-full flex h-[80vh] xl:h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh]'>
                     <Image src={image11} alt="Buns" width={0} height={0} className='sm:w-[42%] ' />
                     <Image src={image12} alt="Meat Pies" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image13} alt="Egusi Soup" width={0} height={0} className='xl:w-[30%]' />

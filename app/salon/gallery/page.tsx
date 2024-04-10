@@ -42,6 +42,7 @@ import image11 from "../../images/gallery/IMG-20240210-WA0022.jpg"
 import image12 from "../../images/gallery/IMG-20240210-WA0014.jpg"
 import image13 from "../../images/gallery/WhatsApp Image 2024-02-21 at 18.12.16_47326e0c.jpg"
 import Image from 'next/image'
+import Styles from '../styles';
 export default function Gallery() {
   const currentYear = new Date();
   const year = currentYear.getFullYear();
@@ -60,6 +61,7 @@ if (!isMounted) {
   let vid2 = '/videos/WhatsApp Video 2024-02-21 at 20.23.04_21a8721a.mp4'
   return (
     <>
+        <Styles />
         <section className='relative w-screen overflow-x-hidden'>
             <nav className='fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl'>
                     {/* Mobile view Brand title */}
@@ -68,7 +70,6 @@ if (!isMounted) {
                         <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-3xl max-xl:w-[20%]">MCM</Link>
                         <div className="italiana font-semibold max-sm:hidden">MCM SALON GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
-                            <Link href='/'>Home</Link>
                             <span  className='text-slate-400 cursor-default'>Gallery</span>
                             <Link href='/salon'>Salon</Link>
                             <span>

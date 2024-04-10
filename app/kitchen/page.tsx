@@ -55,6 +55,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import Menu from './menu';
   
 
 const effectImages = [
@@ -139,51 +140,8 @@ export default function Kitchen(){
 
 
   return (
-    <>
-                        {/* Floating Menu Desktop */}
-                        <Dialog>
-                            <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-10 cursor-pointer rounded-full p-5 bg-white z-50 bottom-8'>
-                                    <MdOutlineMenuBook className='text-xl' />
-                            </DialogTrigger>
-                                <DialogContent>
-                                    <DialogHeader>
-                                    <DialogTitle>MENU</DialogTitle>
-                                    <DialogDescription className='text-black text-[14px] font-semibold flex justify-between py-5'>
-                                    <div className='w-6/12 px-3'>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {food} -</span></p>)}
-                                    </div>
-                                    <div className='w-5/12 px-3 text-center'>
-                                        <span className='pb-6'>PROTEINS</span>
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center  mb-4 mt-6'><span>- {protein} -</span></p>)}
-                                    </div>
-                                        <span className='absolute text-xl bottom-5 right-4 italiana text-gray-300 z-50'>MCM</span>
-                                    </DialogDescription>
-                                    </DialogHeader>
-                                </DialogContent>
-                        </Dialog>
-
-                        {/* Floating Menu Mobile view */}
-                            <Dialog>
-                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-5 cursor-pointer rounded-full p-4 bg-white z-50 bottom-10'>
-                                    <MdOutlineMenuBook className='text-xl' />
-                                </DialogTrigger>
-                                <DialogContent>
-                                    <DialogHeader>
-                                    <DialogTitle className='text-left mb-2'>MENU</DialogTitle>
-                                    <DialogDescription className='text-black text-sm font-semibold relative text-left'>
-                                    <div>
-                                        {foods.map((food, key) => <p key={key} className='flex items-center justify-center mt-4 mb-4'><span>- {food} -</span></p>)}
-                                    </div> 
-                                    <div>
-                                        <span className='justify-center w-full py-4 font-bold mx-auto flex'>PROTEINS</span>
-                                        {proteins.map((protein, key) => <p key={key} className='flex items-center justify-center mb-4'><span>- {protein} -</span></p>)}
-                                    </div>
-                                        
-                                    </DialogDescription>
-                                    </DialogHeader>
-                                </DialogContent>
-                            </Dialog>
-                       
+    <>               
+        <Menu />  
         <section className='w-screen h-fit overflow-x-hidden bg-gray-950 relative'>
             {/* Banner */}
             <div className='w-screen h-screen overflow-y-hidden relative pb-5'>
@@ -195,7 +153,6 @@ export default function Kitchen(){
                     <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-xl:w-[20%]">MCM</Link>
                     <div className="italiana font-semibold max-sm:hidden">MCM KITCHEN</div>
                     <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
-                        <Link href='/'>Home</Link>
                         <Link href='/kitchen/gallery'>Gallery</Link>
                         <Link href='#about'>About</Link>
                         <span>
@@ -402,67 +359,6 @@ export default function Kitchen(){
                     </motion.div>
             </div>
 
-            {/* Services */}
-            {/* <div id='services' className='h-[70vh] w-screen overflow-y-hidden relative max-sm:h-[120vh] max-sm:overflow-x-hidden max-[380px]:h-[155vh] max-xl:h-[50vh]'>
-                <motion.div
-                initial={{translateX:-50}}
-                whileInView={{translateX:0}}
-                transition={{
-                    type:"spring",
-                    duration:1
-                }}
-                className='absolute left-0 top-0 rounded-br-full rounded-tr-xl z-20 bg-yellow-400 px-16 py-5 text-6xl italiana text-slate-800 max-sm:text-2xl max-xl:text-4xl'>
-                    <h6 className=''>Our services</h6>
-                </motion.div>
-
-                <span className='absolute z-10 w-full h-full bg-black/70 max-xl:h-'></span>
-                <Image src={services} alt='Services background' width={0} height={0} className='absolute max-sm:h-[120vh] max-sm:min-w-[1200px] max-sm:-translate-x-44 max-[380px]:h-[165vh] max-[380px]:min-w-[1400px] max-[380px]:-translate-x-72 max-xl:h-[50vh]' />
-                <div className='w-full h-full absolute z-20 flex items-center justify-evenly max-sm:flex-col max-sm:mt-24 max-sm:gap-8 max-sm:justify-start max-xl:mt-0 max-xl:justify-between max-xl:text-[14px]'>
-                      <motion.div
-                      initial={{opacity: 0, translateY:50}}
-                      whileInView={{opacity: 1, translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 0.5
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={seafood} alt='seafood' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Sea Foods</span>
-                        <span className='w-[80%] text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div>
-                      <motion.div
-                      initial={{opacity: 0, translateY:50}}
-                      whileInView={{opacity: 1, translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 0.8
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={vegetables} alt='highlight' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Vegetables</span>
-                        <span className='text-center w-[80%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div> 
-                      <motion.div
-                      initial={{opacity:0, translateY:50}}
-                      whileInView={{opacity:1,translateY:0}}
-                      transition={{
-                          type:"just",
-                          duration:1,
-                          delay: 1
-                      }}
-                      className='flex flex-col gap-10 items-center text-yellow-400 w-[30%] max-sm:w-full max-sm:gap-5 max-xl:w-[33%] max-xl:gap-5'>
-                        <Image src={meat} alt='meat' width={60} height={60} />
-                        <span className='text-2xl font-semibold'>Meat</span>
-                        <span className='text-center w-[80%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit&#46; Nisi&#44; cum sint repellat sequi dolores corrupti quia temporibus impedit&#44; praesentium&#44; tenetur maxime dolore provident consequatur necessitatibus alias iste corporis libero ratione&#33;
-                        </span>
-                      </motion.div>
-                </div>
-            </div> */}
-
             {/* Frenzy */}
             <motion.div
             initial={{ opacity:0}}
@@ -478,71 +374,6 @@ export default function Kitchen(){
                 
             </motion.div>
         
-            {/* Kitchen Prices */}
-            {/* <div className='w-screen relative h-screen bg-gray-950 flex items-center justify-center max-sm:h-fit max-[380px]:mb-5 max-xl:items-start max-xl:h-fit'>
-                <motion.div
-                initial={{ translateX:50}}
-                whileInView={{translateX:0}}
-                transition={{
-                    type:"spring",
-                    duration:1
-                }}
-                className='absolute right-0 top-0 rounded-bl-full rounded-tl-xl z-20 bg-yellow-400 px-16 py-5 text-6xl italiana text-slate-800 max-sm:text-4xl max-xl:text-4xl'>
-                    <h6 className=''>Rates</h6>
-                </motion.div>
-
-                <div className='flex max-sm:flex-col-reverse max-xl:mt-32 max-xl:px-5 max-sm:mt-0 max-sm:px-0'>
-                    <motion.div
-                    initial={{opacity:0, translateX:-50}}
-                    whileInView={{opacity:1, translateX:0}}
-                    transition={{
-                        type:"spring",
-                        duration:1,
-                        delay: 0.5
-                    }}
-                    className='border p-4 border-dotted border-yellow-600/50 w-[50%] max-sm:w-[78%] max-sm:mt-3 max-sm:mx-auto max-sm:px-5'>
-                        <Image src={rate} alt='Haircut image' width={400} height={0} />
-                    </motion.div>
-                    <motion.div
-                    initial={{opacity:0, translateX:50}}
-                    whileInView={{opacity:1, translateX:0}}
-                    transition={{
-                        type:"spring",
-                        duration:1,
-                        delay:1
-                    }}
-                    className='w-[50%] max-sm:mt-32 max-sm:w-full max-sm:px-5 max-xl:mt-0'>
-                        <div className='w-fit'>
-                            <div className='relative text-right'>
-                                <span className='absolute font-bold sacramento text-[80px] right-0 text-gray-900 -top-10'>Prices</span>
-                                <span className='text-white text-2xl absolute right-0 italiana'>Kitchen Prices</span>
-                            </div>
-                            <div className='flex w-full justify-evenly'>
-                                <div className='bg-gray-900 p-5 w-[40%] text-center mt-20 flex flex-col gap-5'>
-                                    <Image src={seafood} alt='seafood' width={60} height={60} className='mx-auto' />
-                                    <span className='text-yellow-400 font-semibold' >Sea Food with Ketchup</span>
-                                </div>
-                                <div className='bg-gray-900 p-5 w-[40%] text-center mt-20 flex flex-col gap-5'>
-                                     <Image src={seafood} alt='seafood' width={60} height={60} className='mx-auto' />
-                                    <span className='text-yellow-400 font-semibold' >Sea Food with Ketchup</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='flex justify-evenly w-fit'>
-                                <div className='bg-gray-900 p-5 w-[40%] text-center mt-5 flex flex-col gap-5'>
-                                    <Image src={seafood} alt='seafood' width={60} height={60} className='mx-auto' />
-                                    <span className='text-yellow-400 font-semibold' >Sea Food with Ketchup</span>
-                                </div>
-                                <div className='bg-gray-900 p-5 w-[40%] text-center mt-5 flex flex-col gap-5'>
-                                    <Image src={seafood} alt='seafood' width={60} height={60} className='mx-auto' />
-                                    <span className='text-yellow-400 font-semibold' >Sea Food with Ketchup</span>
-                                </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </div> */}
-
             {/* Working hours */}
             <div className='w-full bg-gray-950 h-fit py-10 relative pt-36 px-[350px] max-sm:px-5 max-sm:pt-28 max-xl:px-5' >
                 <motion.div

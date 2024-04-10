@@ -17,7 +17,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import swiper_1 from "../images/cc270c2ec0855e4ad3d9b6988b0caaa7.jpeg"
+import swiper_1 from "../images/pexels-robin-stickel-70497.jpg"
 import swiper_2 from "../images/pexels-andrea-piacquadio-3768912.jpg"
 import swiper_3 from "../images/pexels-ntsikelelo-radebe-12192379.jpg"
 
@@ -67,7 +67,7 @@ export default function Home() {
           {/* Nav */}
             <div className="italiana font-semibold sm:hidden w-full text-center text-[10px] py-2 max-sm:text-sm max-[380px]:text-[11px] bg-gray-600/50 text-black">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
             <nav className="flex justify-between items-center px-20 py-8 max-lg:px-10 max-sm:px-5 max-sm:py-2">
-                <div className="italiana text-4xl w-[35%] max-sm:text-3xl max-sm:font-semibold">MCM</div>
+                <div className="italiana text-4xl font-semibold w-[35%] max-sm:text-3xl max-sm:font-semibold">MCM</div>
                 <div className="italiana font-semibold max-sm:hidden max-lg:text-sm w-[55%] text-center xl:text-center">MCM KITCHEN & HAIR BEAUTY SERVICES</div>
                 <div className="xl:flex hidden gap-5 w-[35%] justify-end xl:">
                   <div className="text-slate-300 cursor-default">Home</div>
@@ -85,7 +85,6 @@ export default function Home() {
                     </DropdownMenuContent>
                   </DropdownMenu>
 
-                  {/* <Link href='/'>About</Link> */}
                 </div>
                 <div className=" xl:hidden w-[20%] flex justify-end">
                 <DropdownMenu>
@@ -99,9 +98,6 @@ export default function Home() {
                       <DropdownMenuItem>
                         <Link href='/kitchen'>MCM Kitchen </Link>
                       </DropdownMenuItem>
-                      {/* <DropdownMenuItem>
-                        <Link href='#about'>About </Link>
-                      </DropdownMenuItem> */}
                     </DropdownMenuContent>
                   </DropdownMenu>
                     
@@ -109,7 +105,7 @@ export default function Home() {
             </nav>
 
             <div className="h-[85%] overflow-y-hidden relative overflow-x-hidden  w-screen">
-              <span className="w-full h-full absolute bg-black/50 backdrop-blur-[1px] z-10"></span>
+              <span className="w-full h-full absolute bg-black/60 backdrop-blur-[1px] z-10"></span>
               <Swiper
                       spaceBetween={30}
                       modules={[EffectFade, Autoplay]} 
@@ -120,10 +116,10 @@ export default function Home() {
                           delay: 10000,
                           disableOnInteraction: false,
                       }}
-                      className='absolute z-10 max-lg:h-full max-lg:min-w-[1200px] max-lg:hidden lg:h-full lg:min-w-[1300px] lg:w-screen lg:overflow-x-hidden'
+                      className='absolute overflow-hidden z-10 max-lg:h-full max-lg:min-w-[1200px] max-lg:hidden lg:h-full lg:min-w-[1300px] lg:w-screen lg:overflow-hidden'
                       >
                       {effectImages.map((el : any, i : number) => {
-                          return <SwiperSlide key={i} className="lg:w-screen lg:overflow-x-hidden w-screen overflow-x-hidden"><Image src={el} alt={`Slide ${i} `}  className="max-lg:h-full max-lg:min-w-[1000px] lg:h-full lg:-translate-x-32 xl:translate-x-0 xl:h-fit max-sm:-translate-x-56" /></SwiperSlide>;
+                          return <SwiperSlide key={i} className="lg:w-screen lg:overflow-x-hidden w-screen overflow-hidden"><Image src={el} alt={`Slide ${i} `}  className="max-lg:h-full max-lg:min-w-[1000px] lg:h-full lg:-translate-x-32 xl:translate-x-0 xl:h-fit max-sm:-translate-x-56" /></SwiperSlide>;
                       })}
               </Swiper>
                 
@@ -148,7 +144,7 @@ export default function Home() {
                               <Image alt="MCM Beauty hair slide" src={hair} width={0} height={0} className="h-full absolute" />
                               <span className="w-full h-full bg-black/25 absolute"></span>
                               <div className="absolute w-full h-full z-30 px-5 py-5 flex flex-col justify-between">
-                                <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Hair <br className="max-sm:hidden" /> Beauty saloon</h1>
+                                <h1 className="text-4xl italiana text-center max-sm:text-2xl max-[391px]:text-[20px] font-semibold">MCM Hair <br className="max-sm:hidden" /> Beauty salon</h1>
                                 <Link href="/salon" className="flex justify-between h-fit w-[60%] mx-auto mb-5 bg-blue-600 px-5 py-2 items-center rounded-lg max-[380px]:text-[11px] max-[380px]:py-[4px]">
                                     <span>Explore</span>
                                     <PiCaretRight className="text-4xl animate-pulse max-sm:text-xl" />
