@@ -116,6 +116,7 @@ export default function Saloon() {
     <>  
         <Styles />
         <section className='w-screen h-fit overflow-x-hidden bg-gray-950'>
+            <div  id='top'></div>
             {/* Banner */}
             <div className='w-screen h-screen overflow-y-hidden relative pb-5'>
                 {/* Mobile view Brand title */}

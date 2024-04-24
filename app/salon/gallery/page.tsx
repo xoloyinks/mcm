@@ -78,7 +78,7 @@ if (!isMounted) {
     <>
         <Styles />
         <section className='relative w-screen overflow-x-hidden'>
-            <div  id='okay'></div>
+            <div  id='top'></div>
             <nav className='fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl'>
                     {/* Mobile view Brand title */}
                     <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>

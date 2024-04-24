@@ -9,6 +9,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { PiCaretUp } from 'react-icons/pi';
 
 const proteins = [
     "Grilled Chicken",
@@ -43,8 +44,8 @@ export default function Menu() {
     <>
                         {/* Floating Menu Desktop */}
                         <Dialog>
-                            <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-10 cursor-pointer rounded-full p-5 bg-white z-50 bottom-8'>
-                                    <MdOutlineMenuBook className='text-xl' />
+                            <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-4 bg-gray-700 z-50 bottom-5'>
+                                    <MdOutlineMenuBook className='text-xl text-white' />
                             </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
@@ -65,8 +66,8 @@ export default function Menu() {
 
                         {/* Floating Menu Mobile view */}
                             <Dialog>
-                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-5 cursor-pointer rounded-full p-4 bg-white z-50 bottom-10'>
-                                    <MdOutlineMenuBook className='text-xl' />
+                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-4 bg-gray-700 z-50 bottom-5'>
+                                    <MdOutlineMenuBook className='text-xl text-white' />
                                 </DialogTrigger>
                                 <DialogContent>
                                     <DialogHeader>
@@ -84,6 +85,10 @@ export default function Menu() {
                                     </DialogHeader>
                                 </DialogContent>
                             </Dialog>
+
+                            <a href='#top' className='shadow-xl shadow-red-600/50 fixed right-2 cursor-pointer rounded-full p-3 bg-white z-50 bottom-5'>
+                                <PiCaretUp className='text-2xl'/>
+                            </a>
     </>
   )
 }
