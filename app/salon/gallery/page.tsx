@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import Map from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
-
+import { PiCaretUp } from "react-icons/pi";
 import {
     Drawer,
     DrawerContent,
@@ -57,18 +57,34 @@ if (!isMounted) {
     return null;
   }
 
-  let vid1 = '/videos/WhatsApp Video 2024-02-21 at 20.23.04_ea279878.mp4'
-  let vid2 = '/videos/WhatsApp Video 2024-02-21 at 20.23.04_21a8721a.mp4'
+  let vid4 = '/videos/clothes/Untitled video - Made with Clipchamp.mp4'
+  let vid2 = '/videos/clothes/Untitled video - Made with Clipchamp (1).mp4'
+  let vid3 = '/videos/clothes/vid3.mp4'
+  let vid1 = '/videos/clothes/vid4.mp4'
+  let vid5 = '/videos/clothes/vid5.mp4'
+  let vid6 = '/videos/clothes/vid6.mp4'
+  let vid7 = '/videos/clothes/vid7.mp4'
+  let vid8 = '/videos/clothes/IMG_5836.mp4'
+  let vid9 = '/videos/clothes/vid9.mp4'
+  let vid10 = '/videos/clothes/vid10.mp4'
+  let vid11 = '/videos/clothes/IMG_5843.mp4'
+  let vid12 = '/videos/clothes/IMG_5862.mp4'
+  let vid13 = '/videos/clothes/IMG_5850.mp4'
+  let vid14 = '/videos/clothes/IMG_5857.mp4'
+  let vid15 = '/videos/clothes/IMG_5853.mp4'
+  let vid16 = '/videos/clothes/IMG_5861.mp4'
+
   return (
     <>
         <Styles />
         <section className='relative w-screen overflow-x-hidden'>
+            <div  id='top'></div>
             <nav className='fixed bg-gradient-to-r from-blue-500/50 via-pink-500/25 to-yellow-600/25 backdrop-blur-xl z-40 rounded-b-3xl'>
                     {/* Mobile view Brand title */}
                     <div className="italiana font-semibold text-yellow-400 absolute z-20 text-center w-full pt-2 sm:hidden max-[380px]:text-sm">MCM GALLERY</div>
                     <div className="flex justify-between items-center px-20 py-8 text-yellow-400 w-screen max-sm:px-5 max-sm:py-4 bg-transparent font-semibold max-sm:text-sm max-sm:pt-8" >
                         <Link href='/' className="italiana text-4xl w-[35%] max-[380px]:text-3xl max-sm:text-3xl max-xl:w-[20%]">MCM</Link>
-                        <div className="italiana font-semibold max-sm:hidden">MCM SALON GALLERY</div>
+                        <div className="italiana font-semibold max-sm:hidden">MCM BEAUTY GALLERY</div>
                         <div className="flex gap-5 w-[35%] justify-end max-sm:hidden max-xl:hidden">
                             <span  className='text-slate-400 cursor-default'>Gallery</span>
                             <Link href='/salon'>Salon</Link>
@@ -118,7 +134,7 @@ if (!isMounted) {
                     </div>
             </nav>
  
-            <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20 '>
+            <section id='gallery' className='w-full h-fit max-sm:w-screen bg-gray-800 z-20 '>
                 <div className='w-full flex h-[50vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[50vh]'>
                     <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                     <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
@@ -129,15 +145,258 @@ if (!isMounted) {
                     <Image src={image11} alt='Link' width={0} height={0} className='w-[25%] max-sm:w-full' />
                     <Image src={image5} alt="Fries" width={0} height={0} className='xl:w-[35%] sm:w-[30%]' />
                 </div>
-                <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit bg-black sm:h-[40vh] xl:h-[80vh]'>
+                {/* <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit bg-black sm:h-[40vh] xl:h-[80vh]'>
                     <Image src={image12} alt='Link' width={0} height={0} className='w-[23%] max-sm:w-full' />
                     <Image src={image6} alt="Fries" width={0} height={0} className=' sm:w-[35%] xl:w-[35%]' />
                     <Image src={image7} alt="Fries" width={0} height={0} className='xl:w-[42%]' />
-                </div>
+                </div> */}
                 <div className='w-full flex h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh] '>
                     <Image src={image8} alt="Fries" width={0} height={0} className='xl:w-[42%]' />
                     <Image src={image9} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
                     <Image src={image10} alt="Fries" width={0} height={0} className='xl:w-[30%]' />
+                </div>
+
+
+                {/* Clothe Catalogue */}
+                <div  id='cloth'></div>
+                <div className='py-8 max-sm:py-4 px-5 bg-gray-900 my-3'>
+                   <h1 className='text-2xl text-yellow-400 text-center italiana font-semibold max-sm:text-xl max-sm:tracking-wide'><span className='font-extrabold'>-</span> Our Exclusive Clothing Catalogue <span className='font-extrabold'>-</span></h1>
+                </div>
+                {/* Clothe Gallery */}
+                <div className='w-full flex justify-evenly bg-gray-900 h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh]  sm:pt-5 '>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid1}
+                            controls={true}
+                            playing={true}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid1} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid2}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid2} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid3}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid3} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid4}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid4} type="video/mp4" className='w-full hidden' />
+                    </div>
+                </div>
+
+                <div className='w-full flex justify-evenly bg-gray-900 h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh]  sm:pt-24'>
+                <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid5}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid5} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid6}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid6} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid7}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid7} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid8}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid8} type="video/mp4" className='w-full hidden' />
+                    </div>
+                </div>
+
+                <div className='w-full flex justify-evenly bg-gray-900 h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh]  sm:pt-44'>
+                <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid9}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid9} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid10}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid10} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid11}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid11} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid12}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid12} type="video/mp4" className='w-full hidden' />
+                    </div>
+                </div>
+
+                <div className='w-full flex justify-evenly bg-gray-900 h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-fit sm:pb-5 sm:pt-24 '>
+                <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid13}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid13} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid14}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid14} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid15}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid15} type="video/mp4" className='w-full hidden' />
+                    </div>
+                    <div className='w-[23%] flex items-center  max-sm:w-full '>
+                            <ReactPlayer
+                            url={vid16}
+                            controls={true}
+                            playing={false}
+                            loop={true}
+                            muted={true}
+                            light={false}
+                            pip={true}
+                            height={680}
+                            
+                            />
+                      <source src={vid16} type="video/mp4" className='w-full hidden' />
+                    </div>
                 </div>
 
 
