@@ -158,6 +158,7 @@ if (!isMounted) {
 
 
                 {/* Clothe Catalogue */}
+                <div  id='cloth'></div>
                 <div className='py-8 max-sm:py-4 px-5 bg-gray-900 my-3'>
                    <h1 className='text-2xl text-yellow-400 text-center italiana font-semibold max-sm:text-xl max-sm:tracking-wide'><span className='font-extrabold'>-</span> Our Exclusive Clothing Catalogue <span className='font-extrabold'>-</span></h1>
                 </div>
