@@ -57,10 +57,10 @@ if (!isMounted) {
     return null;
   }
 
-  let vid1 = '/videos/clothes/Untitled video - Made with Clipchamp.mp4'
+  let vid4 = '/videos/clothes/Untitled video - Made with Clipchamp.mp4'
   let vid2 = '/videos/clothes/Untitled video - Made with Clipchamp (1).mp4'
   let vid3 = '/videos/clothes/vid3.mp4'
-  let vid4 = '/videos/clothes/vid4.mp4'
+  let vid1 = '/videos/clothes/vid4.mp4'
   let vid5 = '/videos/clothes/vid5.mp4'
   let vid6 = '/videos/clothes/vid6.mp4'
   let vid7 = '/videos/clothes/vid7.mp4'
@@ -134,7 +134,7 @@ if (!isMounted) {
                     </div>
             </nav>
  
-            <section id='gallery' className='w-full h-screen max-sm:w-screen bg-black z-20 '>
+            <section id='gallery' className='w-full h-fit max-sm:w-screen bg-gray-800 z-20 '>
                 <div className='w-full flex h-[50vh] max-sm:block max-sm:h-fit sm:h-[35vh] xl:h-[50vh]'>
                     <Image src={image3} alt="Fries" width={0} height={0} className='xl:w-[30%] sm:w-[30%]' />
                     <Image src={image1} alt="Fries" width={0} height={0} className='xl:w-[42%] max-sm:w-screen sm:w-[40%]' />
@@ -158,8 +158,8 @@ if (!isMounted) {
 
 
                 {/* Clothe Catalogue */}
-                <div className='py-8 px-5 bg-gray-900'>
-                   <h1 className='text-xl text-white text-center'> Also check out our <br /> Exclusive Clothing Catalogue</h1>
+                <div className='py-8 max-sm:py-4 px-5 bg-gray-900 my-3'>
+                   <h1 className='text-2xl text-yellow-400 text-center italiana font-semibold max-sm:text-xl max-sm:tracking-wide'><span className='font-extrabold'>-</span> Our Exclusive Clothing Catalogue <span className='font-extrabold'>-</span></h1>
                 </div>
                 {/* Clothe Gallery */}
                 <div className='w-full flex justify-evenly bg-gray-900 h-[80vh] max-sm:block max-sm:h-fit sm:h-[40vh] xl:h-[80vh]  sm:pt-5 '>

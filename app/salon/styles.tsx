@@ -26,7 +26,7 @@ export default function Styles() {
     <>
                             {/* Floating Styles Desktop */}
                             <Dialog>
-                                <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-3 bg-black z-50 bottom-5'>
+                                <DialogTrigger className=' max-sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-3 bg-gray-700 z-50 bottom-5'>
                                 <CgGirl className='text-2xl text-white' />
                                 </DialogTrigger>
                                 <DialogContent className='max-w-[550px]'>
@@ -42,7 +42,7 @@ export default function Styles() {
 
                             {/* Floating Styles Mobile */}
                             <Dialog>
-                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-3 bg-black z-50 bottom-5'>
+                                <DialogTrigger className=' sm:hidden shadow-xl shadow-red-600/50 fixed right-16 cursor-pointer rounded-full p-3 bg-gray-700 z-50 bottom-5'>
                                     <CgGirl className='text-2xl text-white' />
                                 </DialogTrigger>
                                 <DialogContent>
